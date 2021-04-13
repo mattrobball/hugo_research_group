@@ -1,0 +1,32 @@
+<footer class="footer footer-custom">
+
+    <!--
+
+    <div class="col-12 col-md text-center text-md-left nav-link text-black">
+
+        Funding: <a href="https://www.nsf.gov">National Science Foundation</a>, <a href="https://www.nsa.gov/">National Security Agency</a>, <a href='https://www.simonsfoundation.org'>Simons Foundation</a> <br />
+
+    </div>
+    
+    -->
+
+    <div class="col-12 col-md text-center text-md-left nav-link text-black">
+        
+        Department of Mathematics, 1523 Greene Street, Columbia, South Carolina 29208, United States (<a href="https://goo.gl/maps/h7sm1GfgWk26tBWA7">Map</a>) <!-- Some explicit directions would be nice -->
+
+    </div>
+
+    <div class="col-12 col-md text-center text-md-left nav-link text-black">
+
+        © Algebra, Geometry, and Number Theory at the University of South Carolina - {{ now.Year }} <br /> All rights reserved.
+        
+    </div>
+
+  <!-- JavaScript and dependencies -->
+
+  {{ $bootstrap := resources.Get "js/bootstrap.bundle.min.js" }}
+  {{ $js := slice $bootstrap | resources.Concat "js/bundle.js" | resources.Minify }}
+
+  <script src="{{$js.RelPermalink}}" defer></script>
+  {{ template "_internal/google_analytics_async.html" . }}
+</footer>

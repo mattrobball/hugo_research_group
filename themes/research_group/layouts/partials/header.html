@@ -1,0 +1,19 @@
+<nav class="navbar navbar-nav-scroll navbar-expand-md navbar-custom navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{{ "/" | relURL }}"><div class="d-lg-none" style="padding-left: 10%;">AGNT @ UofSC</div></a>  
+      <a class="navbar-brand" href="{{ "/" | relURL }}"><div class="d-none d-lg-block">Algebra, Geometry, and Number Theory at UofSC</div></a> 
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          {{ $currentPage := . }}
+          {{ range .Site.Menus.nav }}
+          <li class="nav-item" style="text-align: center;">
+            <a class="nav-link {{ if eq $currentPage.URL .URL }}active" aria-current="page{{ end }}" href="{{ .URL | relURL }}">{{ .Name }}</a>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+</nav>
+  

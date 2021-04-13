@@ -1,0 +1,74 @@
+{{ define "main" }}
+
+<h1> Publications </h1>
+
+<h2> Group highlights </h2> 
+
+ <p> For a full list of publications, <a href="#full-list">see below</a>.</p> <!-- It would be nice to have a link to external repos of published papers for all group members, eg arxiv or mathscinet  -->
+
+<div class="container">
+<div class="row">
+
+{{ range .Site.Data.publications }} <!-- loop over all publications in publications.md -->
+
+{{ if .highlight }} <!-- if highlight variable in publication.md is true -->
+
+<div class="col-sm-6 clearfix">
+ <div class="well">
+  <p><pubtit>{{ .title }}</pubtit></p>
+  <p><img src="/images/publications/{{ .image }}" class="img-responsive" width="33%" style="float: left" />
+  <p>{{ .abstract }}</p></p>
+  <p><em>{{ .authors }}</em> <strong><a href="{{ .url }}">{{ .journal_ref }}</a></strong></p>
+  <p class="text-danger"><strong> {{ .news1 }}</strong></p>
+  <p> {{ .news2 }}</p>
+ </div>
+</div>
+
+{{ end }}
+{{ end }}
+
+</div>
+
+<!-- Get the unique years of publications and sort them in ascending order -->
+{{ $years := slice }}
+{{ range .Site.Data.publications }}
+	{{ $years = $years | append .year }}
+{{ end }}
+{{ $years = uniq $years | sort }}
+{{ $length := len $years }}
+
+
+<div class="row">
+
+<h2 id="full-list">Full List </h2> 
+{{$i := 0}}
+{{ range (seq $length) }}
+    {{ $year := index $years (sub $length .) }}
+	<h3>{{ $year }}</h3>
+
+    <div class="d-grid gap-2">
+
+	{{ range where $.Site.Data.publications ".year" $year }}
+
+    <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ $i }}" aria-expanded="false" aria-controls="collapse{{ . }}" style="color: none; background-color: none; text-align: left; padding-left: 2%">
+            <i>{{ .authors }}. </i> {{ .title }}. <a href="{{ .url }}">{{ .journal_ref }}</a>
+    </button>
+    <div class="collapse" id="collapse{{ $i }}">
+        <div class="card card-body"  style="padding-left: 2%">
+          {{ .abstract }}
+        </div>
+    </div>
+
+    {{$i = add $i 1}}
+
+	{{ end }}
+
+    </div>
+
+    {{$i = add $i 1}}
+{{ end }}
+
+</div>
+</div>
+
+{{ end }}

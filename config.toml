@@ -1,0 +1,39 @@
+BaseURL = "https://www.scagnt.org/"
+languageCode = "en-us"
+title = "Algebra, Geometry, and Number Theory at the University of South Carolina"
+theme = "research_group"
+relativeURLS = true
+googleAnalytics = "G-8S5KWYDY30"
+
+[menu]
+  [[menu.nav]]
+    name = "Home"
+    url = "/"
+    weight = 1 
+  [[menu.nav]]
+    name = "Research"
+    url = "/research/"
+    weight = 2
+  [[menu.nav]]
+    name = "Publications"
+    url = "/publications/"
+    weight = 3
+  [[menu.nav]]
+    name = "Team"
+    url = "/team/"
+    weight = 4
+  [[menu.nav]]
+    name = "Seminar"
+    url = "/seminar/"
+    weight = 5
+
+[params]
+    author = "SCAGNT"
+    description = "Website for the research group Algebra, Geometry, and Number Theory at the University of South Carolina"
+    logo = "https://www.scagnt.org/images/logo.png"
+    images = ["/images/site-feature-image.jpg"]
+
+[module]
+[[module.mounts]]
+    source = "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+    target = "assets/js/bootstrap.bundle.min.js"

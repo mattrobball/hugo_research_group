@@ -1,0 +1,89 @@
+{{define "main"}}
+
+<h3 class="text-center"> Upcoming Talks </h3>
+
+<table class="table table-hover"> 
+    <thead>
+      <tr>
+        <th scope="col">Date & Time</th>
+        <th scope="col">Speaker</th>
+        <th scope="col">Title</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    
+    {{ $talk_number := 0 }}
+    {{ range sort .Site.Data.seminar "seminar_date" "asc" }}
+    {{if ( time .seminar_date ).After (now.AddDate 0 0 -1) }}
+    <tbody class="accordion-header" id="flush-heading{{ $talk_number }}">
+        <tr class="accordion-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#flush-collapse{{ $talk_number }}" aria-expanded="false" aria-controls="flush-collapse{{ $talk_number }}">
+          <td><b>{{ dateFormat "January 2" .seminar_date }}</b> <br />{{.time}}</td>
+          {{if .speaker_url }}
+          <td><a href="{{.speaker_url}}">{{.speaker}}</a><br />{{.affiliation}}</td>
+          {{ else }}
+          <td>{{.speaker}}<br />{{.affiliation}}</td>
+          {{ end }}
+          <td>{{.title}}</td>
+          <td> </td>
+        </tr>
+        <tr>
+            <td colspan="4" style="padding: 0 !important;">
+                <div id="flush-collapse{{ $talk_number }}" class="accordion-collapse collapse" aria-labelledby="flush-heading{{ $talk_number }}" >
+                    <div class="card card-body">
+                      <p>{{ .abstract }}</p>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+    {{ $talk_number = add $talk_number 1}}
+    {{ end }}
+    {{ end }}
+    
+</table>
+
+<h3 class="text-center"> Past Talks </h3>
+
+<table class="table table-hover"> 
+    <thead>
+      <tr>
+        <th scope="col">Date & Time</th>
+        <th scope="col">Speaker</th>
+        <th scope="col">Title</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    
+    {{ $talk_number := 0 }}
+    {{ range sort .Site.Data.seminar "seminar_date" "asc" }}
+    {{if ( time .seminar_date ).After (now.AddDate 0 0 -1) }}
+
+    {{ else }}
+    <tbody class="accordion-header" id="flush-heading{{ $talk_number }}old">
+        <tr class="accordion-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#flush-collapse{{ $talk_number }}old" aria-expanded="false" aria-controls="flush-collapse{{ $talk_number }}old">
+          <td><b>{{ dateFormat "January 2" .seminar_date }}</b> <br />{{.time}}</td>
+          {{if .speaker_url }}
+          <td><a href="{{.speaker_url}}">{{.speaker}}</a><br />{{.affiliation}}</td>
+          {{ else }}
+          <td>{{.speaker}}<br />{{.affiliation}}</td>
+          {{ end }}
+          <td>{{.title}}</td>
+          <td> </td>
+        </tr>
+        <tr>
+            <td colspan="4" style="padding: 0 !important;">
+                <div id="flush-collapse{{ $talk_number }}old" class="accordion-collapse collapse" aria-labelledby="flush-heading{{ $talk_number }}old">
+                    <div class="card card-body">
+                      <p>{{ .abstract }}</p>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+    {{ $talk_number = add $talk_number 1}}
+    {{ end }}
+    {{ end }}
+    
+</table>
+
+{{end}}

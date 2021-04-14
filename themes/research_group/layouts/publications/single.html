@@ -16,7 +16,7 @@
 <div class="col-sm-6 clearfix">
  <div class="well">
   <p><pubtit>{{ .title }}</pubtit></p>
-  <p><img src="/images/publications/{{ .image }}" class="img-responsive" width="33%" style="float: left" />
+  <p><img src="/images/publications/{{ .image }}" class="img-responsive" width="33%" style="float: right" />
   <p>{{ .abstract }}</p></p>
   <p><em>{{ .authors }}</em> <strong><a href="{{ .url }}">{{ .journal_ref }}</a></strong></p>
   <p class="text-danger"><strong> {{ .news1 }}</strong></p>
@@ -53,12 +53,12 @@
 
     <div class="accordion-item">
         <h2 class="accordion-header" id="flush-heading{{ $i }}">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse{{ $i }}" aria-expanded="false" aria-controls="flush-collapse{{ $i }}">
+          <button class="accordion-button collapsed pb-0" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse{{ $i }}" aria-expanded="false" aria-controls="flush-collapse{{ $i }}">
             <p><i>{{ .authors }}. </i> {{ .title }}. <a href="{{ .url }}">{{ .journal_ref }}</a></p>
           </button>
         </h2>
         <div id="flush-collapse{{ $i }}" class="accordion-collapse collapse" aria-labelledby="flush-heading{{ $i }}">
-          <div class="accordion-body">
+          <div class="card card-body">
             {{ .abstract }}
           </div>
         </div>

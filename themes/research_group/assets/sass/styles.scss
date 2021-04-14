@@ -109,6 +109,29 @@ pubtit {
     background-color: white;
 }
 
+// // toggle icon for accordions in tables using fonts downloaded from bootstrap
+// .accordion-toggle td:last-child:after {
+//     font-family: "Glyphicons Halflings";  /* essential for enabling glyphicon */
+//     content: "\e260";    /* adjust as needed, taken from bootstrap.css */
+//     // font-size: 125%;
+//     color: black;
+// }
+// .accordion-toggle.collapsed td:last-child:after {
+//     content: "\e259";    /* adjust as needed, taken from bootstrap.css */
+// }
+
+
+// toggle icon for accordions in tables using fontawesome 4 fonts from their server
+.accordion-toggle td:last-child:after {
+    font-family: "FontAwesome";  /* essential for enabling glyphicon */
+    content: "\f077";    /* adjust as needed, taken from bootstrap.css */
+    font-weight: 900;
+    color: black;
+}
+.accordion-toggle.collapsed td:last-child:after {
+    content: "\f078";    /* adjust as needed, taken from bootstrap.css */
+}
+
 /* De-bugging overflowing elements */
 //  * {
 //     background: #000 !important;

@@ -9,18 +9,18 @@ googleAnalytics = "G-8S5KWYDY30"
   [[menu.nav]]
     name = "Home"
     url = "/"
-    weight = 1 
-  [[menu.nav]]
-    name = "Research"
-    url = "/research/"
-    weight = 2
-  [[menu.nav]]
-    name = "Publications"
-    url = "/publications/"
-    weight = 3
+    weight = 1
   [[menu.nav]]
     name = "Team"
     url = "/team/"
+    weight = 2
+  [[menu.nav]]
+    name = "Research"
+    url = "/research/"
+    weight = 3
+  [[menu.nav]]
+    name = "Publications"
+    url = "/publications/"
     weight = 4
   [[menu.nav]]
     name = "Seminar"
@@ -34,6 +34,6 @@ googleAnalytics = "G-8S5KWYDY30"
   images = ["/images/site-feature-image.jpg"]
 
 [module]
-[[module.mounts]]
+  [[module.mounts]]
     source = "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
     target = "assets/js/bootstrap.bundle.min.js"

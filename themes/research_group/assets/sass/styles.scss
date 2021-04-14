@@ -104,7 +104,10 @@ pubtit {
 	font-weight: bold;
 }
 
-.accordion-toggle:after{color: none}
+// changes the background of accordion buttons to not stand out so much 
+.accordion-item .accordion-button {
+    background-color: white;
+}
 
 /* De-bugging overflowing elements */
 //  * {

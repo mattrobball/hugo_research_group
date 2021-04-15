@@ -121,7 +121,6 @@ pubtit {
 // }
 
 // toggle icon for accordions in tables using fontawesome 4 fonts from their server
-
 .accordion-toggle td:last-child:after {
     font-family: "FontAwesome";  /* essential for enabling glyphicon */
     content: "\f068";    /* adjust as needed, taken from bootstrap.css */
@@ -133,9 +132,8 @@ pubtit {
 }
 
 
-//@media (min-width: 400px) {
-	
 // toggle icon for accordion itself using fontawesome 4 fonts from their server
+@media (min-width: 750px) {
 .accordion-toggle:after {
     font-family: "FontAwesome";  /* essential for enabling glyphicon */
     content: "\f068";    /* adjust as needed, taken from bootstrap.css */
@@ -146,8 +144,7 @@ pubtit {
 .accordion-toggle.collapsed:after {
     content: "\f067";    /* adjust as needed, taken from bootstrap.css */
 }
-
-//}
+}
 
 // removes text on a phone-sized screen
 @media (max-width: 750px) {
@@ -156,21 +153,21 @@ pubtit {
 	}
 }
 
-// // classes to hide/show certain elements depending on viewport size
-// .mobile-only {
-//     display: none;
-// }
 
-// @media (max-width: 400px) {
-// 	.mobile-only {
-// 		display: block;
-// 	}
-//     .non-mobile {
-//         display: none;
-//     }
-// }
+@media (max-width: 750px) {
+    .non-mobile {
+        display: none;
+    }
+}
 
-/* De-bugging overflowing elements */
+@media (min-width: 750px) {
+    .mobile-only {
+        display: none;
+    }
+}
+
+
+// /* De-bugging overflowing elements */
 //  * {
 //     background: #000 !important;
 //     color: #0f0 !important;

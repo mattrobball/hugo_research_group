@@ -1,0 +1,18 @@
+{{ define "main" }}
+
+<h1> Groups Members </h1>
+
+<p> Jump to <a href="#faculty">faculty</a>, <a href="#masters_and_doctoral_students">master-and-doctoral-students</a>, <a href="#bachelor_students">bachelor-students</a>, <a href="#visitors">visitors</a>, <a href="#alumni">alumnni</a>, and <a href="#past-faculty">past faculty</a>. </p>
+
+<h2> Faculty </h2>
+
+<ul>
+<!-- Ranges through content/team/*.md -->
+{{ range .Pages }}
+    <li>
+        <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}}</a>
+    </li>
+{{ end }}
+</ul>
+
+{{ end }}

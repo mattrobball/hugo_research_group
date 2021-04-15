@@ -28,7 +28,7 @@
 
     {{ $js := resources.Get "js/bootstrap.bundle.min.js" }}
     <script src="{{$js.RelPermalink}}" defer></script>
-
+    
     {{ template "_internal/opengraph.html" . }}
     
     {{ template "_internal/twitter_cards.html" . }}

@@ -120,17 +120,55 @@ pubtit {
 //     content: "\e259";    /* adjust as needed, taken from bootstrap.css */
 // }
 
-
 // toggle icon for accordions in tables using fontawesome 4 fonts from their server
+
 .accordion-toggle td:last-child:after {
     font-family: "FontAwesome";  /* essential for enabling glyphicon */
-    content: "\f077";    /* adjust as needed, taken from bootstrap.css */
+    content: "\f068";    /* adjust as needed, taken from bootstrap.css */
     font-weight: 900;
     color: black;
 }
 .accordion-toggle.collapsed td:last-child:after {
-    content: "\f078";    /* adjust as needed, taken from bootstrap.css */
+    content: "\f067";    /* adjust as needed, taken from bootstrap.css */
 }
+
+
+//@media (min-width: 400px) {
+	
+// toggle icon for accordion itself using fontawesome 4 fonts from their server
+.accordion-toggle:after {
+    font-family: "FontAwesome";  /* essential for enabling glyphicon */
+    content: "\f068";    /* adjust as needed, taken from bootstrap.css */
+    font-weight: 900;
+    font-size: 150%;
+    color: black;
+}
+.accordion-toggle.collapsed:after {
+    content: "\f067";    /* adjust as needed, taken from bootstrap.css */
+}
+
+//}
+
+// removes text on a phone-sized screen
+@media (max-width: 750px) {
+	.text-kill {
+		font-size: 0px;
+	}
+}
+
+// // classes to hide/show certain elements depending on viewport size
+// .mobile-only {
+//     display: none;
+// }
+
+// @media (max-width: 400px) {
+// 	.mobile-only {
+// 		display: block;
+// 	}
+//     .non-mobile {
+//         display: none;
+//     }
+// }
 
 /* De-bugging overflowing elements */
 //  * {

@@ -3,6 +3,11 @@ img { margin-bottom: 24px;
    border-radius:2%;
 }
 
+.shadowed-img {
+    -webkit-filter: drop-shadow(5px 5px 5px #222222);
+    filter: drop-shadow(5px 5px 5px #222222);
+}
+
 /* Setting maximum widths on big screens */
 .container {
     max-width: 1300px;
@@ -153,7 +158,7 @@ pubtit {
 	}
 }
 
-
+// effectively a toggle between mobile and non-mobile 
 @media (max-width: 750px) {
     .non-mobile {
         display: none;

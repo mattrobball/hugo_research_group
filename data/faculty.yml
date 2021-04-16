@@ -1,0 +1,36 @@
+- name: Matthew R. Ballard
+  photo: ballard_small.jpg
+  info: Associate professor, started Aug 2013
+  email: ballard@math.sc.edu 
+  education: 
+    1: BS (Math with honors) California Institute of Technology
+    2: PhD (Math) University of Washington
+  postdoc:
+    3: Lecturer, University of Pennsylvania
+    4: Van Vleck Visiting Assistant Professor, University of Wisconsin
+    5: Senior Researcher, Universtat Wien
+  research_interests: Derived categories, birational geometry, noncommutative algebra
+  homepage: www.matthewrobertballard.com
+  other: Member Institute for Advanced Study
+
+- name: Alexander Duncan 
+  photo: duncan_alexander.jpg
+  info: Associate Professor, started Aug 2015
+  email: duncan@math.sc.edu
+  education:
+    1: BS (Math & Physics with honors) University of Toronto
+    2: MS (Math) University of British Columbia
+    3: PhD (Math) University of British Columbia
+  postdoc:
+    4: Assistant Adjunct Professor, University of California, Los Angeles
+    5: Postdoctoral Assistant Professor, University of Michigan, Ann Arbor
+
+- name: Frank Thorne 
+  photo: thorne_frank.jpg
+  info: Associate Professor, started August 2011
+  email: thorne@math.sc.edu
+  education:
+    1: BA (Math) Rice University 
+    2: PhD (Math) University of Wisconsin
+  postdoc: 
+    3: Postdoctoral Scholar, Stanford University

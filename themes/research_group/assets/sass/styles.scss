@@ -3,6 +3,10 @@ img { margin-bottom: 24px;
    border-radius:2%;
 }
 
+a {
+    text-decoration: none;
+}
+
 .shadowed-img {
     -webkit-filter: drop-shadow(5px 5px 5px #222222);
     filter: drop-shadow(5px 5px 5px #222222);

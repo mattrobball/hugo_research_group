@@ -12,14 +12,14 @@
     
     {{ $talk_number := 0 }}
     {{ $slice := (.GetPage "talks/index.md").Resources.ByType "page" }}
-    {{ range sort $slice ".Params.seminar_date" "asc"}}
-    {{if ( time .Params.seminar_date ).After (now) }}
+    {{ range sort $slice ".Params.event_date" "asc"}}
+    {{if ( time .Params.event_date ).After (now) }}
     <tbody class="accordion-header" id="flush-heading{{ $talk_number }}">
         <tr {{ if eq (mod $talk_number 2) 0 }}
               style="background-color: rgba(211,211,211,.3);"
             {{ end }} class="accordion-toggle collapsed text-center" data-bs-toggle="collapse" data-bs-target="#flush-collapse{{ $talk_number }}" aria-expanded="false" aria-controls="flush-collapse{{ $talk_number }}">
-          <td><b>{{ dateFormat "January 2" .Params.seminar_date }}</b> <br />{{.Params.time}}</td>
-          <td>{{.Params.speaker}}<br />{{.Params.affiliation_abbr}}</td>
+          <td><b>{{ dateFormat "January 2" .Params.event_date }}</b> <br />{{.Params.time}}</td>
+          <td>{{.Params.speaker}}<br />{{.Params.speaker_affiliation_abbr}}</td>
           <td>{{.Params.title}}</td>
           <td></td>
         </tr>
@@ -52,17 +52,17 @@
   
   {{ $talk_number := 0 }}
   {{ $slice := (.GetPage "talks/index.md").Resources.ByType "page" }}
-  {{ range sort $slice ".Params.seminar_date" "asc"}}
-  {{if ( time .Params.seminar_date ).After (now) }}
+  {{ range sort $slice ".Params.event_date" "asc"}}
+  {{if ( time .Params.event_date ).After (now) }}
   <tbody>
       <tr {{ if eq (mod $talk_number 2) 0 }}
             style="background-color: rgba(211,211,211,.3);"
           {{ end }} >
-        <td><b>{{ dateFormat "January 2" .Params.seminar_date }}</b> <br />{{ .Params.time }}</td>
+        <td><b>{{ dateFormat "January 2" .Params.event_date }}</b> <br />{{ .Params.time }}</td>
         {{if .Params.speaker_url }}
-        <td><a href="{{.Params.speaker_url}}">{{.Params.speaker}}</a><br />{{.Params.affiliation}}</td>
+        <td><a href="{{.Params.speaker_url}}">{{.Params.speaker}}</a><br />{{.Params.speaker_affiliation}}</td>
         {{ else }}
-        <td>{{.Params.speaker}}<br />{{.Params.affiliation}}</td>
+        <td>{{.Params.speaker}}<br />{{.Params.speaker_affiliation}}</td>
         {{ end }}
         <td>{{.Params.title}}</td>
         <td class="accordion-header" id="flush-heading{{ $talk_number }}"><div class="accordion-toggle collapsed text-center" data-bs-toggle="collapse" data-bs-target="#flush-collapse{{ $talk_number }}" aria-expanded="false" aria-controls="flush-collapse{{ $talk_number }}"></div></td>
@@ -97,16 +97,16 @@
     
     {{ $talk_number := 0 }}
     {{ $slice := (.GetPage "talks/index.md").Resources.ByType "page" }}
-    {{ range sort $slice ".Params.seminar_date" "asc"}}
-    {{if ( time .Params.seminar_date ).After (now) }}
+    {{ range sort $slice ".Params.event_date" "asc"}}
+    {{if ( time .Params.event_date ).After (now) }}
 
     {{ else }}
     <tbody class="accordion-header" id="flush-heading{{ $talk_number }}old">
         <tr {{ if eq (mod $talk_number 2) 0 }}
               style="background-color: rgba(211,211,211,.3);"
             {{ end }} class="accordion-toggle collapsed text-center" data-bs-toggle="collapse" data-bs-target="#flush-collapse{{ $talk_number }}old" aria-expanded="false" aria-controls="flush-collapse{{ $talk_number }}old">
-          <td><b>{{ dateFormat "January 2" .Params.seminar_date }}</b> <br />{{.Params.time}}</td>
-          <td>{{.Params.speaker}}<br />{{.Params.affiliation_abbr}}</td>
+          <td><b>{{ dateFormat "January 2" .Params.event_date }}</b> <br />{{.Params.time}}</td>
+          <td>{{.Params.speaker}}<br />{{.Params.speaker_affiliation_abbr}}</td>
           <td>{{.Params.title}}</td>
           <td></td>
         </tr>
@@ -140,19 +140,19 @@
   
   {{ $talk_number := 0 }}
   {{ $slice := (.GetPage "talks/index.md").Resources.ByType "page" }}
-  {{ range sort $slice ".Params.seminar_date" "asc"}}
-  {{if ( time .Params.seminar_date ).After (now) }}
+  {{ range sort $slice ".Params.event_date" "asc"}}
+  {{if ( time .Params.event_date ).After (now) }}
 
   {{ else }}
   <tbody class="accordion-header" id="flush-heading{{ $talk_number }}old">
       <tr {{ if eq (mod $talk_number 2) 0 }}
             style="background-color: rgba(211,211,211,.3);"
           {{ end }} >
-        <td><b>{{ dateFormat "January 2" .Params.seminar_date }}</b> <br />{{.Params.time}}</td>
+        <td><b>{{ dateFormat "January 2" .Params.event_date }}</b> <br />{{.Params.time}}</td>
         {{if .Params.speaker_url }}
-        <td><a href="{{.Params.speaker_url}}">{{.Params.speaker}}</a><br />{{.Params.affiliation}}</td>
+        <td><a href="{{.Params.speaker_url}}">{{.Params.speaker}}</a><br />{{.Params.speaker_affiliation}}</td>
         {{ else }}
-        <td>{{.Params.speaker}}<br />{{.Params.affiliation}}</td>
+        <td>{{.Params.speaker}}<br />{{.Params.speaker_affiliation}}</td>
         {{ end }}
         <td>{{.Params.title}}</td>
         <td class="accordion-header" id="flush-heading{{ $talk_number }}old"><div class="accordion-toggle collapsed text-center" data-bs-toggle="collapse" data-bs-target="#flush-collapse{{ $talk_number }}old" aria-expanded="false" aria-controls="flush-collapse{{ $talk_number }}old"></div> </td>

@@ -1,0 +1,11 @@
+{{- .Params.author -}}. &nbsp{{- .Params.title -}}. &nbsp<i>{{- .Params.journal -}}</i> 
+{{- with .Params.volume -}}
+    &nbsp{{- . -}}
+{{- end -}} 
+&nbsp({{- .Params.year -}})
+{{- with .Params.number -}}
+, no. {{- . -}}
+{{- end -}}
+{{- with  .Params.pages -}}
+, {{ . }}
+{{- end -}}. 

@@ -1,10 +1,13 @@
 ---
+entry: "" # options are arxiv_preprint, article, book, booklet, inbook, incollection, inproceedings, manual, mastersthesis, misc, phdthesis, proceedings, techreport, unpublished
 author: ""
 title: ""
+edition: "" 
 abstract: "" 
 journal: ""
 fjournal: ""
 volume: 
+series: ""
 year: 
 number: 
 pages: 
@@ -14,12 +17,13 @@ mrclass:
   secondary: ""
 mrnumber:
 doi: ""
+isbn: 
 url: ""
 note: "" 
 publisher: ""
 arxiv_id: ""
-arxiv_url: ""
 image: 
+news: 
 draft: false 
 categories:
 - Lectures 

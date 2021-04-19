@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="row">
+
+    {{ $pubs := (.GetPage "papers/index.md").Resources.Match "*.md" }}
+    {{ $pubs = where $pubs "Params.image" "!=" "" }} <!-- has an associated image -->
+    {{ $pubs = where $pubs "Params.title" "!=" "" }} <!-- has a title -->
+    {{ $pubs = where $pubs "Params.abstract" "!=" ""  }} <!-- has an abstract -->
+    {{ $pubs = where $pubs "Params.doi" "!=" "" }} <!-- has a doi -->
+
+    {{ $pub_total := len $pubs }}
+
+    {{ $seed := div now.YearDay 7 }}
+
+    {{ $i := mod (mul $seed (sub $pub_total 1)) $pub_total }}
+    
+    {{ $highlights := slice }}
+
+    <!-- Select 4 papers from the publications with given seed -->
+    {{ range (seq 4) }}  
+    
+        {{ $highlights = $highlights | append (index $pubs $i)}}
+
+        {{ $i = mod (add $i (sub $pub_total 1)) $pub_total }}
+
+    {{ end }}
+
+    {{ range $highlights }}
+
+    <div class="col-sm-6 clearfix">
+        <div class="well">
+         <p><pubtit>{{ .Params.title }}</pubtit></p>
+         <p><img src="/images/publications/{{ .Params.image }}" class="img-responsive" width="33%" style="float: right" />
+         <p>{{ .Params.abstract }}</p></p>
+         <p><em>{{ .Params.author }}. </em> 
+         <strong><a href="https://doi.org/{{.Params.doi}}">{{ .Params.fjournal }}.</a></strong></p>
+         {{ with .Params.news }}
+         <p class="text-danger"><strong> {{ . }}</strong></p>
+         {{ end }}
+        </div>
+    </div>
+
+    {{ end }}
+    </div>
+</div>

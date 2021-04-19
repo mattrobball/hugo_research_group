@@ -1,14 +1,19 @@
 ---
-seminar_date: 2021-01-29
+event_name: Algebra, Geometry, and Number Theory Seminar 
+event_organization: University of South Carolina 
+event_url: https://www.scagnt.org/seminar/2021/
+event_date: 2021-01-29
 time: 2:30-3:30pm
 speaker: Michael Filaseta
 speaker_url: https://people.math.sc.edu/filaseta/
-affiliation: University of South Carolina
-affiliation_abbr: UofSC
+speaker_affiliation: University of South Carolina
+speaker_affiliation_abbr: UofSC
 title: Old and new information on digitally delicate primes
 abstract: The very oldest information is that Murray Klamkin posed the problem in a 1978 issue of Mathematics Magazine - "Does there exist any prime number such that if any digit (in base 10) is changed to any other digit, the resulting number is always composite?" So people typed code into their punch cards and fed them through a computer card reader to find some examples.  Such primes exist (the smallest one is 294001) and are called digitally delicate primes.  We will discuss results by Paul Erdos, by Terence Tao, and by Jackson Hopper and Paul Pollack. Then we will go into more recent work of the speaker with Jacob Juillerat and Jeremiah Southwick.  The most recent work, just completed, is with Jacob.
+vid_conf_url: https://us02web.zoom.us/j/89152240695?pwd=SytlL1RpUlQ4T1JUck92d0FPV1d0QT09
+vid_conf_pw: 379495
+recording_url: ""
 draft: false # needs to be set false to have the information published on the seminar page
-katex: true # for latex processing
 categories:
 - Seminar 
 tags:

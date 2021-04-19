@@ -1,0 +1,17 @@
+{{ define "main" }}
+
+<h1> Publications </h1>
+
+<h2> Selected highlights </h2> 
+
+<p> For a full list of publications, <a href="#full-list">see below</a>.</p> <!-- It would be nice to have a link to external repos of published papers for all group members, eg arxiv or mathscinet  -->
+
+{{- partial "publication_highlights.html" . -}}
+
+<h2 id="full-list">Full List </h2> 
+<br>
+
+{{- partial "all_papers_sorted.html" . -}}
+
+<!-- End of file -->
+{{ end }} 

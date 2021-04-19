@@ -1,0 +1,20 @@
+{{- .Params.author -}}.&nbsp {{- .Params.title -}}.&nbsp 
+{{- with .Params.edition -}}
+    {{.}} edition. 
+{{ end }}
+{{- with .Params.note -}}
+    &nbsp{{.}}
+{{- end -}}
+{{- with .Params.series -}}
+    . {{.}}
+{{ end }}
+{{- with .Params.volume -}}
+    , {{.}}
+{{- end -}}
+. &nbsp{{- .Params.publisher -}},&nbsp {{- .Params.year -}}. 
+{{- with .Params.pages -}}
+    &nbsp{{.}} pp.
+{{- end -}}
+{{- with .Params.isbn -}}
+    &nbspISBN: {{.}}. 
+{{- end -}}

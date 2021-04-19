@@ -1,0 +1,104 @@
+<!-- Get the unique years of publications and sort them in ascending order -->
+{{ $years := slice }}
+{{ $slice := (.GetPage "papers/index.md").Resources.ByType "page" }}
+{{ range $slice }}
+	{{ $years = $years | append .Params.year }}
+{{ end }}
+{{ $years = uniq $years | sort }}
+{{ $length := len $years }}
+
+{{$i := 0}} <!-- Initialize a counter to label items uniquely -->
+{{ range (seq $length) }} <!-- Loop over a sequence the length equal to the number of years -->
+{{ $year := index $years (sub $length .) }} <!-- Reverse the indexing -->
+    
+<h3>{{ $year }}</h3>
+{{ $j := 0 }}
+<table class="table align-middle mobile-only"> 
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead> 
+  
+  {{ range where $slice ".Params.year" $year }} <!-- Loop over all the publications from publications.yml with the matching year -->
+  <tbody class="accordion-header" id="flush-heading{{ $i }}">
+      <tr {{ if eq (mod $j 2) 0 }}
+            style="background-color: rgba(211,211,211,.3);"
+          {{ end }} class="accordion-toggle collapsed text-center" data-bs-toggle="collapse" data-bs-target="#flush-collapse{{ $i }}" aria-expanded="false" aria-controls="flush-collapse{{ $i }}">
+        <td> {{- partial "gen_bib.html" . -}} </td>
+        <td></td>
+      </tr>
+      <tr>
+          <td colspan="2" style="padding: 0 !important;">
+              <div id="flush-collapse{{ $i }}" class="accordion-collapse collapse" aria-labelledby="flush-heading{{ $i }}" >
+                  <div class="card card-body">
+                    <p> 
+                        {{.Params.abstract}}
+                        {{ with .Params.arxiv_id }}
+                            <a href="https://arxiv.org/abs/{{- . -}}">arXiv.</a>
+                        {{end}}
+                        {{ with .Params.doi }}
+                            <a href="https://doi.org/{{- . -}}">DOI.</a>
+                        {{end}}
+                        {{ with .Params.mrnumber }}
+                            <a href="https://mathscinet.ams.org/mathscinet-getitem?mr={- . -}}">MathSciNet.</a>
+                        {{end}}
+                    </p>
+                  </div>
+              </div>
+          </td>
+      </tr>
+  </tbody>
+  {{$j = add $j 1}}
+  {{$i = add $i 1}}
+  {{ end }}
+</table> 
+
+<!-- <table class="table align-middle non-mobile">  -->
+<table class="table non-mobile">
+  <thead>
+    <tr>
+      <tr>
+        <th scope="col">Article</th>
+        <th scope="col">More</th>
+      </tr>
+    </tr>
+  </thead>
+
+  {{ range where $slice ".Params.year" $year }} <!-- Loop over all the publications from publications.yml with the matching year -->
+  <tbody>
+        <tr {{ if eq (mod $j 2) 0 }}
+            style="background-color: rgba(211,211,211,.3);"
+            {{ end }} >
+        <td style="text-align: left;"> {{- partial "gen_bib.html" . -}} </td>
+        <td class="accordion-header" id="flush-heading{{ $i }}"><div class="accordion-toggle collapsed text-center" data-bs-toggle="collapse" data-bs-target="#flush-collapse{{ $i }}" aria-expanded="false" aria-controls="flush-collapse{{ $i }}"></div></td>
+      </tr>
+      <tr>
+          <td colspan="2" style="padding: 0 !important;">
+              <div id="flush-collapse{{ $i }}" class="accordion-collapse collapse" aria-labelledby="flush-heading{{ $i }}" >
+                  <div class="card card-body">
+                    <p> 
+                        {{.Params.abstract}} 
+                        {{ with .Params.arxiv_id }}
+                            <a href="https://arxiv.org/abs/{{- . -}}">arXiv.</a>
+                        {{end}}
+                        {{ with .Params.doi }}
+                            <a href="https://doi.org/{{- . -}}">DOI.</a>
+                        {{end}}
+                        {{ with .Params.mrnumber }}
+                            <a href="https://mathscinet.ams.org/mathscinet-getitem?mr={{- . -}}">MathSciNet.</a>
+                        {{end}}
+                    </p>
+                  </div>
+              </div>
+          </td>
+      </tr>
+  </tbody>
+  {{$j = add $j 1}}
+  {{$i = add $i 1}}
+  {{ end }}
+</table> 
+
+{{$i = add $i 1}}
+{{ end }}

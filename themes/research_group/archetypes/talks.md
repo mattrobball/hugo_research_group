@@ -1,15 +1,21 @@
 ---
-seminar_date: # format YYYY-MM-DD
+event_name: "" # also works for conferences
+event_organization: "" # also works for conferences
+event_url: "" # also works for conferences
+event_date: # format YYYY-MM-DD
 time: ""
 speaker: ""
 speaker_url: ""
-affiliation: ""
-affiliation_abbr: "" # abbreviation used for mobile display
+speaker_affiliation: ""
+speaker_affiliation_abbr: "" # abbreviation used for mobile display
 title: "" 
-abstract: "" 
+abstract: ""
+vid_conf_url: ""
+vid_conf_password: "" 
+recording_url: ""
 draft: true # needs to be set false to have the information published on the seminar page
 categories:
-- Seminar 
+- Lectures 
 tags:
-- # research, learning, ... 
+- Research # research, learning, ... 
 ---

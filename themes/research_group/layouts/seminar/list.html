@@ -1,11 +1,5 @@
 {{define "main"}}
 
-{{ $len := len (.URL) }}
-
-<h1 class="text-center"> {{ slicestr .URL (sub $len 5) (sub $len 1) }} </h1>
-
-<hr> 
-
 {{ .Content }}
 
 <hr>

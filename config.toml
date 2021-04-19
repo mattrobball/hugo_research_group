@@ -23,9 +23,17 @@ googleAnalytics = "G-8S5KWYDY30"
     url = "/publications/"
     weight = 4
   [[menu.nav]]
-    name = "Seminar"
+    name = "Seminars"
     url = "/seminar/"
     weight = 5
+  [[menu.nav]]
+    name = "Courses"
+    url = "/courses/"
+    weight = 6
+  [[menu.nav]]
+    name = "Blog"
+    url = "/blog/"
+    weight = 7
 
 [params]
   author = "SCAGNT"

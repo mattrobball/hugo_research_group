@@ -4,50 +4,45 @@ description: The webpage for the Algebra, Geometry, and Number Theory research g
 date: 2021-04-12T19:29:17-04:00
 draft: false
 katex: true 
-carousel_alt:
-  calabi-yau: A Calabi-Yau manifold
-  elliptic_curve: Addition on an elliptic curve
-funding_alt:
-  uofsc: University of South Carolina 
-  simons: The Simons Foundation
-  nsf: National Science Foundation
-  nsa: National Security Agency
-  fields: The Fields Institute
-  sec: Southeastern Conference
+carousel:
+  1: 
+    src: images/carousel/calabi-yau.jpg
+    alt: A Calabi-Yau manifold
+  2: 
+    src: images/carousel/elliptic-curve.png
+    alt: Addition on an elliptic curve 
+funding:
+  1:
+    src: images/funding/uofsc.png 
+    alt: University of South Carolina
+    url: http://www.sc.edu
+  2: 
+    src: images/funding/simons.png 
+    alt: Simons Foundation
+    url: http://www.simonsfoundation.org
+  3:
+    src: images/funding/nsf.png
+    alt: National Science Foundation
+    url: http://www.nsf.gov
+  4: 
+    src: images/funding/nsa.png 
+    alt: National Security Agency
+    url: http://www.nsa.gov
+  5:
+    src: images/funding/fields.png
+    alt: Fields Institute
+    url: http://www.fields.utoronto.ca/
+  6:
+    src: images/funding/sec.png
+    alt: Southeastern Conference
+    url: http://www.thesecu.com
 ---
+
+# Welcome to the SC AGNT group
 
 We are a dynamic research group from the [Department of Mathematics](http://www.math.sc.edu) at the [University of South Carolina](http://www.sc.edu). Our aim is to explore and understand questions dating back [thousands of years](https://math.berkeley.edu/~wodzicki/160.F05/HistIntr.pdf). <!--Find a better link here -->
 
-{{< carousel >}}
-
-{{<raw_html>}}
-<div id="slideshow" class="carousel slide carousel-fade" data-bs-ride="carousel" data-interval="5000" data-pause="hover">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#slideshow" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#slideshow" data-bs-slide-to="1" aria-label="Slide 2"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-        <div class="image-container">
-            <img src="/images/carousel/Calabi_yau.jpg" class="fit" alt="A Calabi-Yau">
-        </div>
-    </div>
-    <div class="carousel-item">
-        <div class="image-container">
-            <img src="/images/carousel/elliptic_curve_3_copyright_unknown.png" class="fit" alt="Addition on an elliptic curve">
-        </div>
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#slideshow" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#slideshow" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-{{</raw_html>}}
+{{<carousel>}} <!-- Carousel of images. To add images, include then in /static/images/carousel and add the location and alt text to the front matter. -->
 
 <!-- Replace this description with something appropriate for the group
 
@@ -55,28 +50,5 @@ To this end, we develop novel spectroscopic-imaging scanning tunneling microscop
 
 We are located at Leiden University, the birthplace of superconductivity and home to Kamerlingh Onnes, Lorentz, Huygens, Einstein, de Sitter, and others (see e.g. [the wall of signatures from Ehrenfest lecturers](https://www.lorentz.leidenuniv.nl/history/colloquium/muur_heel.html)). We exchange ideas and work with our neighbors from [Quantum Matter & Optics](http://www.physics.leidenuniv.nl/qo-home), as well as with the colleagues from our [world-class theory section](https://www.lorentz.leidenuniv.nl).--> 
 
+{{<funding>}} <!-- Funding acknowledgement -->
 
-We are grateful to acknowledge partial support from the University of South Carolina, the [National Science Foundation](www.nsf.gov), the [National Security Agency](www.nsa.gov), the [Simons Foundation](https://www.simonsfoundation.org), the [Fields Institute](www.fields.utoronto.ca), and the [Southeastern Conference](www.thesecu.com).
-
-{{<raw_html>}}
-<div class="row">
-    <div class="col-2">
-        <img src="/images/UofSC.png" class="img-fluid" >
-    </div>
-    <div class="col-2">
-        <img src="/images/simons.png" class="img-fluid" >
-    </div>
-    <div class="col-2">
-        <img src="/images/NSF.png" class="img-fluid" >
-    </div>
-    <div class="col-2">
-        <img src="/images/nsa.png" class="img-fluid" >
-    </div>  
-    <div class="col-2">
-        <img src="/images/Fields.png" class="img-fluid" >
-    </div>  
-    <div class="col-2">
-        <img src="/images/SEC.png" class="img-fluid" >
-    </div>  
-</div>
-{{</raw_html>}}

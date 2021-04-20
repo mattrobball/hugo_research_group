@@ -31,7 +31,7 @@
     <script src="./js/bootstrap.bundle.min.js" defer></script>
     
     <meta property="og:title" content="Algebra, Geometry, and Number Theory at the University of South Carolina" />
-<meta property="og:description" content="Website for the research group Algebra, Geometry, and Number Theory at the University of South Carolina" />
+<meta property="og:description" content="The webpage for the Algebra, Geometry, and Number Theory research group at the University of South Carolina." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://www.scagnt.org/" /><meta property="og:image" content="https://www.scagnt.org/images/site-feature-image.jpg"/>
 
@@ -41,7 +41,7 @@
 <meta name="twitter:image" content="https://www.scagnt.org/images/site-feature-image.jpg"/>
 
 <meta name="twitter:title" content="Algebra, Geometry, and Number Theory at the University of South Carolina"/>
-<meta name="twitter:description" content="Website for the research group Algebra, Geometry, and Number Theory at the University of South Carolina"/>
+<meta name="twitter:description" content="The webpage for the Algebra, Geometry, and Number Theory research group at the University of South Carolina."/>
 
 
     
@@ -57,6 +57,36 @@ if (!doNotTrack) {
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR+zwDAROtph0PXGte6ia8heboACF9R5l/DiY+WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous">
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8+w2LAIftJEULZABrF9PPFv+tVkH" crossorigin="anonymous"></script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js" integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB+w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v" crossorigin="anonymous"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            
+            
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false}, 
+                {left: "\\(", right: "\\)", display: false},
+                {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+                {left: "\\begin{align}", right: "\\end{align}", display: true},
+                {left: "\\begin{alignat}", right: "\\end{alignat}", display: true},
+                {left: "\\begin{gather}", right: "\\end{gather}", display: true},
+                {left: "\\begin{CD}", right: "\\end{CD}", display: true},
+                {left: "\\[", right: "\\]", display: true}
+                ],
+            
+            throwOnError : false
+        });
+    });
+</script>
     
  
 </head>
@@ -84,7 +114,13 @@ if (!doNotTrack) {
             <a class="nav-link " href="./publications/">Publications</a>
           
           <li class="nav-item" style="text-align: center;">
-            <a class="nav-link " href="./seminar/">Seminar</a>
+            <a class="nav-link " href="./seminar/">Seminars</a>
+          
+          <li class="nav-item" style="text-align: center;">
+            <a class="nav-link " href="./courses/">Courses</a>
+          
+          <li class="nav-item" style="text-align: center;">
+            <a class="nav-link " href="./blog/">Blog</a>
           
         </ul>
       </div>
@@ -94,61 +130,130 @@ if (!doNotTrack) {
             <div class="row">
 
 <div class="col-sm-8">
-    <h1>Welcome to the SCAGNT Group</h1>
-	<p>We are a dynamic research group from the <a href="http://www.math.sc.edu">Department of Mathematics</a> at the <a href="http://www.sc.edu">University of South Carolina</a>. Our aim is to explore and understand questions dating back <a href="https://math.berkeley.edu/~wodzicki/160.F05/HistIntr.pdf">thousands of years</a>. <!-- raw HTML omitted --></p>
+	<h1 id="welcome-to-the-sc-agnt-group">Welcome to the SC AGNT group</h1>
+<p>We are a dynamic research group from the <a href="http://www.math.sc.edu">Department of Mathematics</a> at the <a href="http://www.sc.edu">University of South Carolina</a>. Our aim is to explore and understand questions dating back <a href="https://math.berkeley.edu/~wodzicki/160.F05/HistIntr.pdf">thousands of years</a>. <!-- raw HTML omitted --></p>
+<p>
+
 
 <div id="slideshow" class="carousel slide carousel-fade" data-bs-ride="carousel" data-interval="5000" data-pause="hover">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#slideshow" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#slideshow" data-bs-slide-to="1" aria-label="Slide 2"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-        <div class="image-container">
-            <img src="./images/carousel/Calabi_yau.jpg" class="fit" alt="A Calabi-Yau">
-        </div>
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#slideshow" data-bs-slide-to="0"  class="active" aria-current="true"  aria-label="Slide 1"></button><button type="button" data-bs-target="#slideshow" data-bs-slide-to="1"  aria-label="Slide 2"></button>
     </div>
-    <div class="carousel-item">
-        <div class="image-container">
-            <img src="./images/carousel/elliptic_curve_3_copyright_unknown.png" class="fit" alt="Addition on an elliptic curve">
-        </div>
+    <div class="carousel-inner">
+        
+        
+      <div class="carousel-item active">
+          <div class="image-container">
+              <img src="./images/carousel/calabi-yau.jpg" class="fit" alt="A Calabi-Yau manifold" title="A Calabi-Yau manifold">
+          </div>
+      </div>
+        
+        
+      <div class="carousel-item">
+          <div class="image-container">
+              <img src="./images/carousel/elliptic-curve.png" class="fit" alt="Addition on an elliptic curve" title="Addition on an elliptic curve">
+          </div>
+      </div>
+        
+        
     </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#slideshow" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#slideshow" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#slideshow" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#slideshow" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+</div> <!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>
 
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>We are grateful to acknowledge partial support from the University of South Carolina, the <a href="www.nsf.gov">National Science Foundation</a>, the <a href="www.nsa.gov">National Security Agency</a>, the <a href="https://www.simonsfoundation.org">Simons Foundation</a>, the <a href="www.fields.utoronto.ca">Fields Institute</a>, and the <a href="www.thesecu.com">Southeastern Conference</a>.</p>
+
+We are grateful to acknowledge partial support from the 
+
+    
+    the <a href="http://www.sc.edu">University of South Carolina</a>,
+
+    
+    the <a href="http://www.simonsfoundation.org">Simons Foundation</a>,
+
+    
+    the <a href="http://www.nsf.gov">National Science Foundation</a>,
+
+    
+    the <a href="http://www.nsa.gov">National Security Agency</a>,
+
+    
+    the <a href="http://www.fields.utoronto.ca/">Fields Institute</a>,
+
+    
+        and 
+    
+    the <a href="http://www.thesecu.com">Southeastern Conference</a>.
+
+
+
 
 <div class="row">
-    <div class="col-2">
-        <img src="./images/UofSC.png" class="img-fluid" >
+    <div class="col" 
+    style="width: 16.666666666666668%;
+    flex: 0 0 16.666666666666668%; 
+    max-width: 16.666666666666668%;
+    position: relative;
+    width: 100%;
+    padding-right: 8px;
+    padding-left: 8px;">
+        <img src="images/funding/uofsc.png" class="img-fluid" alt="University of South Carolina" title="University of South Carolina">
+    </div><div class="col" 
+    style="width: 16.666666666666668%;
+    flex: 0 0 16.666666666666668%; 
+    max-width: 16.666666666666668%;
+    position: relative;
+    width: 100%;
+    padding-right: 8px;
+    padding-left: 8px;">
+        <img src="images/funding/simons.png" class="img-fluid" alt="Simons Foundation" title="Simons Foundation">
+    </div><div class="col" 
+    style="width: 16.666666666666668%;
+    flex: 0 0 16.666666666666668%; 
+    max-width: 16.666666666666668%;
+    position: relative;
+    width: 100%;
+    padding-right: 8px;
+    padding-left: 8px;">
+        <img src="images/funding/nsf.png" class="img-fluid" alt="National Science Foundation" title="National Science Foundation">
+    </div><div class="col" 
+    style="width: 16.666666666666668%;
+    flex: 0 0 16.666666666666668%; 
+    max-width: 16.666666666666668%;
+    position: relative;
+    width: 100%;
+    padding-right: 8px;
+    padding-left: 8px;">
+        <img src="images/funding/nsa.png" class="img-fluid" alt="National Security Agency" title="National Security Agency">
+    </div><div class="col" 
+    style="width: 16.666666666666668%;
+    flex: 0 0 16.666666666666668%; 
+    max-width: 16.666666666666668%;
+    position: relative;
+    width: 100%;
+    padding-right: 8px;
+    padding-left: 8px;">
+        <img src="images/funding/fields.png" class="img-fluid" alt="Fields Institute" title="Fields Institute">
+    </div><div class="col" 
+    style="width: 16.666666666666668%;
+    flex: 0 0 16.666666666666668%; 
+    max-width: 16.666666666666668%;
+    position: relative;
+    width: 100%;
+    padding-right: 8px;
+    padding-left: 8px;">
+        <img src="images/funding/sec.png" class="img-fluid" alt="Southeastern Conference" title="Southeastern Conference">
     </div>
-    <div class="col-2">
-        <img src="./images/simons.png" class="img-fluid" >
-    </div>
-    <div class="col-2">
-        <img src="./images/NSF.png" class="img-fluid" >
-    </div>
-    <div class="col-2">
-        <img src="./images/nsa.png" class="img-fluid" >
-    </div>  
-    <div class="col-2">
-        <img src="./images/Fields.png" class="img-fluid" >
-    </div>  
-    <div class="col-2">
-        <img src="./images/SEC.png" class="img-fluid" >
-    </div>  
 </div>
-
+ <!-- raw HTML omitted --></p>
 
 </div>
 <div id="newsid" class="col-sm-4" ><div class="well">

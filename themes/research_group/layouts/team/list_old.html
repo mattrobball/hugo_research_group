@@ -1,0 +1,60 @@
+{{ define "main" }}
+
+{{<h1> Groups Members </h1>
+
+<p> Jump to <a href="#faculty">faculty</a>, <a href="#masters_and_doctoral_students">master and doctoral students</a>, <a href="#bachelor_students">bachelor students</a>, <a href="#visitors">visitors</a>, <a href="#alumni">alumni</a>, and <a href="#past-faculty">past faculty</a>. </p>
+
+<h2> Faculty </h2>
+
+<div class="container">
+
+{{ $i := 0 }}
+{{ range .Site.Data.faculty }}
+
+{{ if eq (mod $i 2) 0 }}
+<div class="row">
+{{ end }}
+
+<div class="col-sm-6 clearfix">
+    <div class="well">
+        <img src="/images/team/{{ .photo }}" class="img-responsive shadowed-img" width="30%" style="float: right; margin-bottom: 5px; margin-top: 0px;" />
+        <h4 class="text-center">{{ .name }}</h4>
+        <i>{{ .info }}</i> <!--<br>email: <{{ .email }}></i> -->
+        <br>
+        <b>Education:</b> <br>
+        {{ range .education }}  
+          {{ . }} <br>
+        {{ end }}
+        <b>Postdoctoral training:</b> <br>
+        {{ range .postdoc }}  
+          {{ . }} <br>
+        {{ end }}
+        <b>Research interests:</b> {{ .research_interests }} <br>
+        <b>Homepage: </b> <a href="{{.homepage}}">{{.homepage}}</a>
+    </div>
+</div>
+
+{{ if eq (mod $i 2) 1 }}
+</div>
+{{ end }}
+
+{{ $i = add $i 1 }}
+{{ end }}
+
+{{ if eq (mod $i 2) 0 }}
+</div>
+{{ end }}
+
+</div>
+
+<!-- 
+<ul>
+// Ranges through content/team/*.md
+{{ range .Pages }}
+    <li>
+        <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}}</a>
+    </li>
+{{ end }}
+</ul> -->}}
+
+{{ end }}

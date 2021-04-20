@@ -1,0 +1,37 @@
+<div class="container">
+
+    {{ $i := 0 }}
+    {{ $grads := ($.Page.GetPage "grad/index.md").Resources.ByType "page"}}
+    {{ range $grads }}
+    
+    {{ if eq (mod $i 3) 0 }}
+    <div class="row">
+    {{ end }}
+    
+    <div class="col-sm-4 clearfix">
+        <div class="well">
+            <img src="/images/grad/{{ .Params.photo }}" class="img-responsive shadowed-img" width="18%" style="float: right; margin-bottom: 5px; margin-top: 0px;" />
+            <h4>{{ .Params.name }}</h4>
+            <i>Started {{.Params.year_started }}</i> <!--<br>email: <{{ .Params.email }}></i> -->
+            <br>
+            <b>Advisor:</b> &nbsp;
+            {{ .Params.advisor }}
+            {{ with .Params.homepage }}
+            <b>Website:</b> 
+              <a href="{{.}}">{{.}}</a><br>
+            {{ end }}
+        </div>
+    </div>
+    
+    {{ if eq (mod $i 3) 2 }}
+    </div>
+    {{ end }}
+    
+    {{ $i = add $i 1 }}
+    {{ end }}
+    
+    {{ if ne (mod $i 3) 2 }}
+    </div>
+    {{ end }}
+    </div>
+</div>

@@ -1,10 +1,24 @@
 ---
 title: "Algebra, Geometry, and Number Theory at the University of South Carolina"
+description: The webpage for the Algebra, Geometry, and Number Theory research group at the University of South Carolina. 
 date: 2021-04-12T19:29:17-04:00
 draft: false
+katex: true 
+carousel_alt:
+  calabi-yau: A Calabi-Yau manifold
+  elliptic_curve: Addition on an elliptic curve
+funding_alt:
+  uofsc: University of South Carolina 
+  simons: The Simons Foundation
+  nsf: National Science Foundation
+  nsa: National Security Agency
+  fields: The Fields Institute
+  sec: Southeastern Conference
 ---
 
 We are a dynamic research group from the [Department of Mathematics](http://www.math.sc.edu) at the [University of South Carolina](http://www.sc.edu). Our aim is to explore and understand questions dating back [thousands of years](https://math.berkeley.edu/~wodzicki/160.F05/HistIntr.pdf). <!--Find a better link here -->
+
+{{< carousel >}}
 
 {{<raw_html>}}
 <div id="slideshow" class="carousel slide carousel-fade" data-bs-ride="carousel" data-interval="5000" data-pause="hover">

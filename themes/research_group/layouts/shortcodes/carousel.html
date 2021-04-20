@@ -1,0 +1,41 @@
+{{ $images := ($.Page.GetPage "carousel/index.md").Resources.ByType "image" }}
+{{ range $.Page.Resources.src "carousel/*" }}
+    {{ .alt }}
+{{ end }}
+{{ range $images }}
+    {{ . }}
+{{ end }}
+
+{{ $i := 1 }}
+
+
+{{/*
+<div id="slideshow" class="carousel slide carousel-fade" data-bs-ride="carousel" data-interval="5000" data-pause="hover">
+    <div class="carousel-indicators">
+        {{ range $images }}
+        <button type="button" data-bs-target="#slideshow" data-bs-slide-to="{{$i}}" {{ with eq $i 1 }} $class="active" aria-current="true" {{ end }} aria-label="Slide {{$i}}"></button>
+        {{ $i = add $i 1 }}
+        {{ end }}
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+          <div class="image-container">
+              <img src="/images/carousel/Calabi_yau.jpg" class="fit" alt="A Calabi-Yau">
+          </div>
+      </div>
+      <div class="carousel-item">
+          <div class="image-container">
+              <img src="/images/carousel/elliptic_curve_3_copyright_unknown.png" class="fit" alt="Addition on an elliptic curve">
+          </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#slideshow" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#slideshow" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+</div>
+*/}}

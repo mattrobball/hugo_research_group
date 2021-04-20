@@ -1,13 +1,17 @@
 <div class="container">
     <div class="row">
 
-    {{ $pubs := (.GetPage "papers/index.md").Resources.Match "*.md" }}
+    {{ $pubs := (.GetPage "papers/index.md").Resources.ByType "page" }}
     {{ $pubs = where $pubs "Params.image" "!=" "" }} <!-- has an associated image -->
     {{ $pubs = where $pubs "Params.title" "!=" "" }} <!-- has a title -->
     {{ $pubs = where $pubs "Params.abstract" "!=" ""  }} <!-- has an abstract -->
     {{ $pubs = where $pubs "Params.doi" "!=" "" }} <!-- has a doi -->
 
     {{ $pub_total := len $pubs }}
+
+    {{ if eq $pub_total 0 }}
+        Weird that I need this. 
+    {{ else }}
 
     {{ $seed := div now.YearDay 7 }}
 
@@ -41,4 +45,5 @@
 
     {{ end }}
     </div>
+    {{ end }}
 </div>

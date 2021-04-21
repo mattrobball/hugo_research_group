@@ -1,0 +1,204 @@
+{{ $people := (.Page.GetPage "/team/people/index.md").Resources.ByType "page"}}
+{{ if ne .Params.group "all"}}
+    {{$people = where $people "Params.class" "=" .Params.group }}
+{{ end }}
+
+{{ $alumni := (.Page.GetPage "/team/alumni/index.md").Resources.ByType "page"}}
+{{ if ne .Params.group "all"}}
+    {{$alumni = where $alumni "Params.class" "=" .Params.group }}
+{{ end }}
+
+{{ if ne (len $people) 0 }}
+<div class="container big-screen">
+
+    {{ $i := 0 }}
+    {{ range $people }}
+    
+    {{ if eq (mod $i 3) 0 }}
+    <div class="row">
+    {{ end }}
+
+        <div class="col-4">
+            <div class="row">
+            <div class="my-auto" style="width: 120px; text-align: center;">
+                <img src="/images/team/{{ .Params.photo }}" width="100px" style="align-items: center;" />
+            </div>
+            <div class="col my-auto" style="line-height: 80%;">
+                <p><b style="font-size: large; line-height: 100%;">{{ .Params.name }}</b></p>
+                <p>{{.Params.position}}</p>
+                {{ if .Params.advisor }}<p style="line-height: 125%;"> <b>Advisor: </b>{{.Params.advisor }} <br> {{ with .Params.research_interests }} <b>Interests: </b>{{delimit . ", "}} {{ end }}</p>
+                {{ else }} <p style="line-height: normal;">{{ with .Params.research_interests }} <b>Interests: </b>{{delimit . ", "}} </p> {{ end }} {{end}}
+            </div>
+            </div>
+        </div>
+    {{ if eq (mod $i 3) 2 }}
+    </div>
+    {{ end }}
+    
+    {{ $i = add $i 1 }}
+    {{ end }}
+
+    {{ $i = sub $i 1}}
+    
+    {{ if ne (mod $i 3) 2 }}
+    </div>
+    {{ end }}
+
+
+</div>
+
+<div class="container med-screen-upper med-screen-lower">
+
+    {{ $i := 0 }}
+    {{ range $people }}
+    
+    {{ if eq (mod $i 2) 0 }}
+    <div class="row">
+    {{ end }}
+        <div class="col-6">
+            <div class="row">
+            <div class="my-auto"style="width: 120px; text-align: center;">
+                <img src="/images/team/{{ .Params.photo }}" width="100px" style="align-items: center;" />
+            </div>
+            <div class="col my-auto" style="line-height: 80%;">
+                <p><b style="font-size: large; line-height: 100%;">{{ .Params.name }}</b></p>
+                <p>{{.Params.position}}</p>
+                {{ if .Params.advisor }}<p style="line-height: 125%;"> <b>Advisor: </b>{{.Params.advisor }} <br> {{ with .Params.research_interests }} <b>Interests: </b>{{delimit . ", "}} {{ end }}</p>
+                {{ else }} <p style="line-height: normal; margin-bottom: 1%;">{{ with .Params.research_interests }} <b>Interests: </b>{{delimit . ", "}} {{ end }}</p> {{end}}
+            </div>
+            </div>
+        </div>
+    {{ if eq (mod $i 2) 1 }}
+    </div>
+    {{ end }}
+    
+    {{ $i = add $i 1 }}
+    {{ end }}
+
+    {{ $i = sub $i 1}}
+    
+    {{ if ne (mod $i 2) 1 }}
+    </div>
+    {{ end }}
+
+</div>
+
+<div class="container small-screen">
+    <div class="row">
+    {{ range $people }}
+        <div class="col-12">
+            <div class="row">
+                <div class="my-auto" style="width: 120px;">
+                    <img src="/images/team/{{ .Params.photo }}" width="100px" style="align-items: center;" />
+                </div>
+                <div class="col my-auto" style="line-height: 80%;">
+                    <p><b style="font-size: large; line-height: 100%;">{{ .Params.name }}</b></p>
+                    <p>{{.Params.position}}</p>
+                    {{ if .Params.advisor }}<p style="line-height: 125%;"> <b>Advisor: </b>{{.Params.advisor }} <br> {{ with .Params.research_interests }} <b>Interests: </b>{{delimit . ", "}} {{ end }}</p>
+                    {{ else }} <p style="line-height: normal; margin-bottom: 1%;">{{ with .Params.research_interests }} <b>Interests: </b>{{delimit . ", "}} {{ end }}</p> {{end}}
+                </div>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</div>
+{{ else }}
+<div class="container" style="margin-bottom: 1%;">
+  There are currently no {{.Params.group}} in the group.
+</div>
+{{ end }}
+
+{{ if ne (len $alumni) 0 }}
+<h2>Alumni</h2>
+<div class="container big-screen">
+
+    {{ $i := 0 }}
+    {{ range $alumni }}
+    
+    {{ if eq (mod $i 3) 0 }}
+    <div class="row">
+    {{ end }}
+
+        <div class="col-4">
+            <div class="row">
+            <div class="my-auto" style="width: 120px; text-align: center;">
+                <img src="/images/alumni/{{ .Params.photo }}" width="100px" style="align-items: center;" />
+            </div>
+            <div class="col my-auto" style="line-height: 80%;">
+                <p><b style="font-size: large; line-height: 100%;">{{ .Params.name }}</b></p>
+                <p>Former {{.Params.position}}</p>
+                {{ if .Params.advisor }}<p style="line-height: 125%;"> <b>Advisor: </b>{{.Params.advisor }} <br> {{ with .Params.thesis}} <b>Thesis: </b>{{.}}. {{ end }}</p> {{end}}
+            </div>
+            </div>
+        </div>
+    {{ if eq (mod $i 3) 2 }}
+    </div>
+    {{ end }}
+    
+    {{ $i = add $i 1 }}
+    {{ end }}
+    {{ $i = sub $i 1 }}
+    
+    {{ if ne (mod $i 3) 2 }}
+    </div>
+    {{ end }}
+
+</div>
+<div class="container med-screen-upper med-screen-lower">
+
+    {{ $i := 0 }}
+    {{ range $alumni }}
+    
+    {{ if eq (mod $i 2) 0 }}
+    <div class="row">
+    {{ end }}
+        <div class="col-6">
+            <div class="row">
+            <div class="my-auto"style="width: 120px; text-align: center;">
+                <img src="/images/alumni/{{ .Params.photo }}" width="100px" style="align-items: center;" />
+            </div>
+            <div class="col my-auto" style="line-height: 80%;">
+                <p><b style="font-size: large; line-height: 100%;">{{ .Params.name }}</b></p>
+                <p>Former {{.Params.position}}</p>
+                {{ if .Params.advisor }}<p style="line-height: 125%;"> <b>Advisor: </b>{{.Params.advisor }} <br> {{ with .Params.thesis}} <b>Thesis: </b>{{.}} {{ end }}</p>{{end}}
+            </div>
+            </div>
+        </div>
+    {{ if eq (mod $i 2) 1 }}
+    </div>
+    {{ end }}
+    
+    {{ $i = add $i 1 }}
+    {{ end }}
+    {{ $i = sub $i 1 }}
+    
+    {{ if ne (mod $i 2) 1 }}
+    </div>
+    {{ end }}
+</div>
+<div class="container small-screen">
+    <div class="row">
+    {{ range $alumni }}
+        <div class="col-12">
+            <div class="row">
+                <div class="my-auto" style="width: 120px;">
+                    <img src="/images/alumni/{{ .Params.photo }}" width="100px" style="align-items: center;" />
+                </div>
+                <div class="col my-auto" style="line-height: 80%;">
+                    <p><b style="font-size: large; line-height: 100%;">{{ .Params.name }}</b></p>
+                    <p>Former {{.Params.position}}</p>
+                    {{ if .Params.advisor }}<p style="line-height: 125%;"> <b>Advisor: </b>{{.Params.advisor }} <br> {{ with .Params.thesis}} <b>Thesis: </b>{{.}}. {{ end }}</p>
+                   {{end}}
+                </div>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</div>
+{{ else }}
+
+<h2>Alumni </h2>
+<div class="container">
+  There are currently no {{.Params.group}} alumni. 
+</div>
+{{ end }}

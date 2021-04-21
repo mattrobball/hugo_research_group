@@ -5,9 +5,11 @@ draft: false
 katex: false
 name: Blake Farman
 photo: farman_blake.jpg
+class: graduate students
 position: PhD student
 advisor: Matthew Ballard
-thesis: Geometry of Derived Categories on Noncommutative Projective Schemes.
+thesis: Geometry of Derived Categories on Noncommutative Projective Schemes
+scholar_commons_id: 4669 # https://scholarcommons.sc.edu/etd/4669/
 graduation_year: 2018
 homepage: https://ulm.edu/~farman/
 current_position: 

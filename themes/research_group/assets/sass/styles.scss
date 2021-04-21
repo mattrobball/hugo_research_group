@@ -175,6 +175,43 @@ pubtit {
     }
 }
 
+// another toggle
+@media (max-width: 1100px) {
+    .big-screen {
+        display: none;
+    }
+}
+@media (min-width: 1101px) {
+    .med-screen-upper {
+        display: none;
+    }
+}
+@media (max-width: 750px) {
+    .med-screen-lower {
+        display: none;
+    }
+}
+@media (min-width: 751px) {
+    .small-screen {
+        display: none;
+    }
+}
+
+
+
+// toggles for the brand 
+@media (max-width: 1020px) {
+    .big-brand {
+        display: none;
+    }
+}
+@media (min-width: 1020px) {
+    .med-brand {
+        display: none;
+    }
+}
+
+
 // removing some extra space in the collapsible drop downs
 .card {
     padding-bottom: 0px;
@@ -186,8 +223,8 @@ pubtit {
 }
 
 // /* De-bugging overflowing elements */
-//  * {
+// * {
 //     background: #000 !important;
 //     color: #0f0 !important;
 //     outline: solid #f00 1px !important;
-//  }
+// }

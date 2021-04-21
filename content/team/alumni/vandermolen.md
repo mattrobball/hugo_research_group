@@ -5,6 +5,7 @@ draft: false
 katex: false
 name: Robert Vandermolen
 photo: vandermolen_robert.png
+class: graduate students
 position: PhD student
 advisor: Matthew Ballard
 thesis: Windows and generalized Drinfeld kernels

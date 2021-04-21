@@ -5,6 +5,7 @@ draft: false
 katex: true
 name: Matthew R. Ballard
 photo: ballard_small.jpg
+class: faculty
 position: Associate Professor
 start_date: 2013-08-15
 email: ballard@math.sc.edu

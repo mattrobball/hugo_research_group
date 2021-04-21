@@ -5,6 +5,7 @@ draft: false
 katex: false
 name: Alicia Lamarche
 photo: lamarche_alicia.jpg
+class: graduate students
 position: PhD student
 advisor: Matthew Ballard
 thesis: Rationality questions and the derived category

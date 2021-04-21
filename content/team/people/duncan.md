@@ -5,6 +5,7 @@ draft: false
 katex: true
 name: Alexander Duncan
 photo: duncan_alexander.jpg
+class: faculty
 position: Associate Professor
 start_date: 2015-08-15
 email: duncan@math.sc.edu

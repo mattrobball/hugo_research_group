@@ -4,6 +4,7 @@ description: The webpage for the Algebra, Geometry, and Number Theory research g
 date: 2021-04-12T19:29:17-04:00
 draft: false
 katex: true 
+nav: Home
 carousel:
   1: 
     src: images/carousel/calabi-yau.jpg

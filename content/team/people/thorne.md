@@ -5,6 +5,7 @@ draft: false
 katex: true
 name: Frank Thorne
 photo: thorne_frank.jpg
+class: faculty
 position: Associate Professor
 start_date: 2011-08-15
 email: thorne@math.sc.edu

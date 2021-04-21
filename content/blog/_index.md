@@ -4,5 +4,6 @@ description: "Blog for the research group in Algebra, Geometry, and Number Theor
 date: 2021-04-20T21:07:46-04:00
 draft: false
 katex: true 
+nav: Blog
 ---
 

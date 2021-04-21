@@ -4,6 +4,7 @@ description: "Talk and schedule information for a seminar of the Algebra, Geomet
 layout: yearly
 draft: false
 katex: true
+nav: Team
 categories:
 - Seminar 
 tags:

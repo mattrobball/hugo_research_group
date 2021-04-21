@@ -1,0 +1,39 @@
+<div class="container">
+
+    {{ $i := 0 }}
+    {{ $alumni := ($.Page.GetPage "alumni/index.md").Resources.ByType "page"}}
+    {{ range $alumni }}
+    
+    {{ if eq (mod $i 3) 0 }}
+    <div class="row">
+    {{ end }}
+    
+    <div class="col-sm-4 clearfix">
+        <div class="well">
+            <img src="/images/alumni/{{ .Params.photo }}" class="img-responsive shadowed-img" width="23%" style="float: right; margin-bottom: 5px; margin-top: 0px;" />
+            <h4>{{ .Params.name }}</h4>
+            {{ .Params.position }}. {{with .Params.graduation_year}} <i>Graduated {{.}}</i> {{end}}<!--<br>email: <{{ .Params.email }}></i> --> <br>
+            {{ if .Params.advisor }}
+                <b>Advisor:</b> {{.Params.advisor}} <br>
+                <b>Thesis:</b> {{.Params.thesis}} <br>
+            {{ end }}
+            <b>Current Position:</b>
+            {{ .Params.current_position.name }} at {{.Params.current_position.institution}}
+            {{ with .Params.homepage }}
+            <br><a href="{{.}}">Website</a>.
+            {{ end }}
+        </div>
+    </div>
+    
+    {{ if eq (mod $i 3) 2 }}
+    </div>
+    {{ end }}
+    
+    {{ $i = add $i 1 }}
+    {{ end }}
+    
+    {{ if ne (mod $i 3) 2 }}
+    </div>
+    {{ end }}
+    </div>
+</div>

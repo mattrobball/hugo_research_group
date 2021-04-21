@@ -10,15 +10,15 @@
     
     <div class="col-sm-4 clearfix">
         <div class="well">
-            <img src="/images/grad/{{ .Params.photo }}" class="img-responsive shadowed-img" width="18%" style="float: right; margin-bottom: 5px; margin-top: 0px;" />
+            <img src="/images/grad/{{ .Params.photo }}" class="img-responsive shadowed-img" width="23%" style="float: right; margin-bottom: 5px; margin-top: 0px;" />
             <h4>{{ .Params.name }}</h4>
             <i>Started {{.Params.year_started }}</i> <!--<br>email: <{{ .Params.email }}></i> -->
             <br>
-            <b>Advisor:</b> &nbsp;
-            {{ .Params.advisor }}
+            <b>Advisor:</b>
+            {{ .Params.advisor }} <br>
+            <b>Research Interests: </b> {{ with .Params.research_interests }} {{delimit . ", "}} {{ end }}
             {{ with .Params.homepage }}
-            <b>Website:</b> 
-              <a href="{{.}}">{{.}}</a><br>
+            <br><a href="{{.}}">Website</a>.
             {{ end }}
         </div>
     </div>

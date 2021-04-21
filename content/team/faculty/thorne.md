@@ -31,8 +31,8 @@ postdoc:
     start: 2008-09-01
     end: 2011-06-01
 research_interests: 
-  1: 
-  2: 
+  1: Classical analytic number theory
+  2: Distribution of number fields, class group torsion, and related topics
 honors: 
   1:
     year:

@@ -7,5 +7,7 @@ name: Tracy Huggins
 photo: oh_yeah.png
 year_started: 2016
 advisor: Alexander Duncan
+research_interests:
+  1: Essential dimension
 homepage: 
 ---

@@ -7,5 +7,7 @@ name: Jonathan Smith
 photo: smith_jonathan.jpg
 year_started: 2019
 advisor: Alexander Duncan
+research_interests:
+  1: 
 homepage: 
 ---

@@ -43,8 +43,11 @@ postdoc:
     start: 2011-08-01
     end: 2012-05-01
 research_interests: 
-  1: 
-  2: 
+  1: Birational geometry
+  2: Rational surfaces
+  3: Toric varieties
+  4: Galois cohomology
+  5: Essential dimension
 honors: 
   1:
     year:

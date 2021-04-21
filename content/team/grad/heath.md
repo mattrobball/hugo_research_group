@@ -7,5 +7,7 @@ name: Bailey Heath
 photo: heath_bailey.jpg
 year_started: 2019
 advisor: Alexander Duncan
+research interests:
+  1: 
 homepage: 
 ---

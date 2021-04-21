@@ -8,7 +8,7 @@ katex: true
 
 # Groups Members
 
-Jump to [faculty](#faculty), [graduate students](#graduate-students), [undergraduate students](#undergraduate-students), [visitors](#visitors), [alumni](#alumni), [past faculty](#past-faculty).
+Jump to [faculty](#faculty), [graduate students](#graduate-students), [undergraduate students](#undergraduate-students), [visitors](#visitors), or [alumni](#alumni).
 
 ## Faculty
 
@@ -29,8 +29,4 @@ Jump to [faculty](#faculty), [graduate students](#graduate-students), [undergrad
 ## Alumni
 
 {{< alumni_list >}}
-
-## Past Faculty
-
-{{< past_faculty_list >}}
 

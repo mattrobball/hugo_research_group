@@ -7,5 +7,7 @@ name: Demmas Salim
 photo: oh_yeah.png
 year_started: 2017
 advisor: Frank Thorne
+research_interests:
+  1: 
 homepage: 
 ---

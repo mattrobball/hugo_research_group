@@ -3,7 +3,9 @@ title: "Robert Vandermolen - AGNT @ UofSC"
 description: "Alumni of the Algebra, Geometry, and Number Theory research group at the University of South Carolina"
 draft: false
 katex: false
-name: Robert Vandermolen
+name: 
+  first: Robert
+  last: Vandermolen
 photo: vandermolen_robert.png
 class: graduate students
 position: PhD student

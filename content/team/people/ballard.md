@@ -3,7 +3,10 @@ title: "Matthew Ballard - SCAGNT @ UofSC"
 description: "Faculty summary for the Algebra, Geometry, and Number Theory research group at the University of South Carolina"
 draft: false
 katex: true
-name: Matthew R. Ballard
+name: 
+  first: Matthew 
+  middle: Robert
+  last: Ballard
 photo: ballard_small.jpg
 class: faculty
 position: Associate Professor

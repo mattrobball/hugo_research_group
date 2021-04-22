@@ -6,6 +6,9 @@ katex: true
 class: # options faculty, graduate students, undergraduate students, visitors
 nav: Team
 name: 
+  first:
+  middle:
+  last:
 photo: 
 position: 
 advisor: 

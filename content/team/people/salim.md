@@ -5,7 +5,9 @@ draft: false
 katex: true
 class: graduate students
 position: PhD student
-name: Demmas Salim
+name: 
+  first: Demmas
+  last: Salim
 photo: oh_yeah.png
 year_started: 2017
 advisor: Frank Thorne

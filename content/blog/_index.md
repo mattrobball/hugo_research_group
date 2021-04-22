@@ -7,3 +7,6 @@ katex: true
 nav: Blog
 ---
 
+# Blog
+---
+

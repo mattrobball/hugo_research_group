@@ -3,7 +3,9 @@ title: "Alexander Duncan - SCAGNT @ UofSC"
 description: "Faculty summary for the Algebra, Geometry, and Number Theory research group at the University of South Carolina"
 draft: false
 katex: true
-name: Alexander Duncan
+name: 
+  first: Alexander
+  last: Duncan
 photo: duncan_alexander.jpg
 class: faculty
 position: Associate Professor

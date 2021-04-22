@@ -5,6 +5,9 @@ draft: false
 katex: true
 nav: Team
 name: 
+  first:
+  middle:
+  last:
 photo:
 class: faculty
 position: 

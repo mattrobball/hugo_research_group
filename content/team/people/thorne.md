@@ -3,7 +3,9 @@ title: "Frank Thorne - SCAGNT @ UofSC"
 description: "Faculty summary for the Algebra, Geometry, and Number Theory research group at the University of South Carolina"
 draft: false
 katex: true
-name: Frank Thorne
+name: 
+  first: Frank
+  last: Thorne
 photo: thorne_frank.jpg
 class: faculty
 position: Associate Professor

@@ -3,7 +3,9 @@ title: "Blake Farman - AGNT @ UofSC"
 description: "Alumni of the Algebra, Geometry, and Number Theory research group at the University of South Carolina"
 draft: false
 katex: false
-name: Blake Farman
+name: 
+  first: Blake 
+  last: Farman
 photo: farman_blake.jpg
 class: graduate students
 position: PhD student

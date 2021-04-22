@@ -5,7 +5,9 @@ draft: false
 katex: true
 class: graduate students
 position: PhD student
-name: Bailey Heath
+name: 
+  first: Bailey
+  last: Heath
 photo: heath_bailey.jpg
 year_started: 2019
 advisor: Alexander Duncan

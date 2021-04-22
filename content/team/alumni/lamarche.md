@@ -3,7 +3,9 @@ title: " - AGNT @ UofSC"
 description: "Alumni of the Algebra, Geometry, and Number Theory research group at the University of South Carolina"
 draft: false
 katex: false
-name: Alicia Lamarche
+name: 
+  first: Alicia 
+  last: Lamarche
 photo: lamarche_alicia.jpg
 class: graduate students
 position: PhD student

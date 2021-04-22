@@ -5,10 +5,14 @@ draft: false
 katex: true
 class: faculty # options faculty, graduate students, undergraduate students, visitors
 nav: Team
-name: Patrick McFaddin
+name: 
+  first: Patrick 
+  last: McFaddin
 photo: mcfaddin_patrick.jpeg
 position: Postdoc
-advisor: Matthew Ballard & Alexander Duncan
+advisors: 
+  1: Matthew Ballard
+  2: Alexander Duncan
 thesis: 
 graduation_year: 
 homepage: https://mcfaddin.github.io/

@@ -8,6 +8,9 @@ honors:
 level:
 course_name:
 instructor: 
+  first:
+  middle:
+  last:
 year: 
 semester:
 crn:  

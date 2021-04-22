@@ -5,7 +5,9 @@ draft: false
 katex: true
 class: graduate students
 position: PhD student
-name: Tracy Huggins
+name: 
+  first: Tracy
+  last: Huggins
 photo: oh_yeah.png
 year_started: 2016
 advisor: Alexander Duncan

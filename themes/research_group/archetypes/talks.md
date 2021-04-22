@@ -4,7 +4,10 @@ event_organization: "" # also works for conferences
 event_url: "" # also works for conferences
 event_date: # format YYYY-MM-DD
 time: ""
-speaker: ""
+speaker: 
+  first:
+  middle:
+  last:
 speaker_url: ""
 speaker_affiliation: ""
 speaker_affiliation_abbr: "" # abbreviation used for mobile display

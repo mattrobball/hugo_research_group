@@ -22,7 +22,7 @@
 <ul style="padding-left: 5%;">
 {{ range sort (where (where $slice ".Params.year" $year) ".Params.semester" "Fall") ".Params.course_number" }} 
     <li>
-        Math {{.Params.course_number}} - {{.Params.course_name}}. Instructor: {{.Params.instructor}}. {{with .Params.webpage }} <a href="{{.}}">Webpage</a> {{end}}
+        Math {{.Params.course_number}} - {{.Params.course_name}}. Instructor: {{with .Params.instructor}} {{.first}} {{.last}}. {{end}} {{with .Params.webpage }} <a href="{{.}}">Webpage</a> {{end}}
     </li>
 {{ end }}
 </ul>
@@ -34,7 +34,7 @@
 <ul style="padding-left: 5%;">
 {{ range sort (where (where $slice ".Params.year" $year) ".Params.semester" "Spring") ".Params.course_number" }} 
 <li>
-    Math {{.Params.course_number}} - {{.Params.course_name}}. Instructor: {{.Params.instructor}}.  {{with .Params.webpage }} <a href="{{.}}">Webpage</a> {{end}}
+    Math {{.Params.course_number}} - {{.Params.course_name}}. Instructor: {{with .Params.instructor}} {{.first}} {{.last}}. {{end}}  {{with .Params.webpage }} <a href="{{.}}">Webpage</a> {{end}}
 </li>
 {{ end }}
 </ul>

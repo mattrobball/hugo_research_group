@@ -5,10 +5,14 @@ draft: false
 katex: true
 class: graduate students
 position: PhD student
-name: Keller VandeBogert
+name: 
+  first: Keller
+  last: VandeBogert
 photo: vandebogert_keller.jpg
 year_started: 2017
-advisor: Matthew Ballard & Andrew Kustin
+advisors: 
+  1: Matthew Ballard
+  2: Andrew Kustin
 research_interests:
   1: Free resolutions
 homepage: http://people.math.sc.edu/kellerlv/

@@ -7,6 +7,9 @@ katex: true
 nav: Courses
 ---
 
-# Courses 
+# Courses
+----
 
 We regularly teach classes in algebra, geometry, and number theory. Below you can find a list of past, current, and upcoming courses in our area. 
+
+----

@@ -1,6 +1,14 @@
 ---
 entry: "" # options are arxiv_preprint, article, book, booklet, inbook, incollection, inproceedings, manual, mastersthesis, misc, phdthesis, proceedings, techreport, unpublished
-author: ""
+authors:
+  1:
+    first:
+    middle:
+    last:
+  2:
+    first:
+    middle:
+    last: 
 title: ""
 edition: "" 
 abstract: "" 
@@ -26,7 +34,7 @@ image:
 news: 
 draft: false 
 categories:
-- Lectures 
+- Publications 
 tags:
 - Research 
 ---

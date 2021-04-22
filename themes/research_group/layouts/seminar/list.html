@@ -1,5 +1,24 @@
 {{define "main"}}
 
+<div class="container">
+
 {{ .Content }}
+
+{{ partial "sc_upcoming_talks.html" . }}
+
+<p>The full {{now.Year}} schedule for the Algebra, Geometry, and Number Theory Seminar can be found <a href="./{{now.Year}}/">here</a>. Schedules from previous years are listed below.
+</p>
+
+<div class="row" style="text-align: center;">
+{{ $number := sub now.Year 2013 }}
+{{range seq $number}}
+    {{ $year := sub now.Year . }}
+    <div class="col-md-6">
+     <a href="./{{$year}}/">{{$year}} Algebra, Geometry, and Number Theory Seminar</a><br>
+    </div>
+{{ end }}
+</div>
+
+</div>
 
 {{end}}

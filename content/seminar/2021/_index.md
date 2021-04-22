@@ -4,6 +4,9 @@ description: "Talk and schedule information for a seminar of the Algebra, Geomet
 layout: yearly
 draft: false
 katex: true
+event_name: Algebra, Geometry, and Number Theory Seminar 
+event_organization: University of South Carolina 
+year: 2021 
 nav: Seminars
 categories:
 - Seminar 

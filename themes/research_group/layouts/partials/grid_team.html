@@ -1,9 +1,19 @@
-{{ $people := (.Page.GetPage "/team/people/index.md").Resources.ByType "page"}}
+{{ $everyone := (.Site.GetPage "/team/_index.md").RegularPages }}
+{{ $people := slice }}
+{{ $alumni := slice }}
+
+{{ range $everyone }}
+{{ if in .RelPermalink "/people/"}}
+    {{ $people = $people | append . }}
+{{ else if in .RelPermalink "/alumni/"}}
+    {{ $alumni = $alumni | append . }}
+{{end}}
+{{end}}
+
 {{ if ne .Params.group "all"}}
     {{$people = where $people "Params.class" "=" .Params.group}}
 {{ end }}
 
-{{ $alumni := (.Page.GetPage "/team/alumni/index.md").Resources.ByType "page"}}
 {{ if ne .Params.group "all"}}
     {{$alumni = where $alumni "Params.class" "=" .Params.group}}
 {{ end }}
@@ -12,7 +22,9 @@
 <div class="container big-screen">
     <div class="row">
     {{ range sort $people "Params.name.last"  }}
+        
         <div class="col-4">
+            <a href="{{.RelPermalink}}" style="text-decoration: none;  color: inherit;">
             <div class="row">
             <div class="my-auto" style="width: 120px; text-align: center;">
                 <img src="/images/team/{{ .Params.photo }}" width="100px" style="align-items: center;" />
@@ -21,14 +33,14 @@
                 <p><b style="font-size: large; line-height: 100%;">{{ with .Params.name }}{{.first}} {{.last}}{{end}}</b></p>
                 <p>{{.Params.position}}</p>
                 {{ if .Params.advisors }}
-                    <p style="line-height: normal; margin-bottom: 1%;"><b>Advisors:</b> {{ with .Params.advisors }} {{ delimit . ", "}}{{end}}<br> {{ with .Params.research_interests }} <b>Interests: </b>{{delimit . ", "}} {{ end }}</p> 
+                    <p style="line-height: normal; "><b>Advisors:</b> {{ with .Params.advisors }} {{ delimit . ", "}}{{end}}</p> 
                 {{else if .Params.advisor}} 
-                    <p style="line-height: normal; margin-bottom: 1%;"><b>Advisor: </b>{{.Params.advisor }} <br> {{ with .Params.research_interests }} <b>Interests: </b>{{delimit . ", "}} {{ end }}</p>
+                    <p style="line-height: normal; "><b>Advisor: </b>{{.Params.advisor }} </p>
                 {{ else }}
-                    <p style="line-height: normal; margin-bottom: 1%;">{{ with .Params.research_interests }} <b>Interests: </b>{{delimit . ", "}} {{ end }}</p>
                 {{end}}
             </div>
             </div>
+            </a>
         </div>
     {{ end }}
     </div>
@@ -38,6 +50,7 @@
     <div class="row">
     {{ range sort $people "Params.name.last" }}
         <div class="col-6">
+            <a href="{{.RelPermalink}}" style="text-decoration: none;  color: inherit;">
             <div class="row">
             <div class="my-auto"style="width: 120px; text-align: center;">
                 <img src="/images/team/{{ .Params.photo }}" width="100px" style="align-items: center;" />
@@ -46,14 +59,14 @@
                 <p><b style="font-size: large; line-height: 100%;">{{ with .Params.name }}{{.first}} {{.last}}{{end}}</b></p>
                 <p>{{.Params.position}}</p>
                 {{ if .Params.advisors }}
-                    <p style="line-height: normal; margin-bottom: 1%;"><b>Advisors:</b> {{with .Params.advisors}} {{ delimit . ", "}}{{end}}<br> {{ with .Params.research_interests }} <b>Interests: </b>{{delimit . ", "}} {{ end }}</p> 
+                    <p style="line-height: normal; "><b>Advisors:</b> {{with .Params.advisors}} {{ delimit . ", "}}{{end}}</p> 
                 {{else if .Params.advisor}} 
-                    <p style="line-height: normal; margin-bottom: 1%;"><b>Advisor: </b>{{.Params.advisor }} <br> {{ with .Params.research_interests }} <b>Interests: </b>{{delimit . ", "}} {{ end }}</p>
+                    <p style="line-height: normal; "><b>Advisor: </b>{{.Params.advisor }} </p>
                 {{ else }}
-                    <p style="line-height: normal; margin-bottom: 1%;">{{ with .Params.research_interests }} <b>Interests: </b>{{delimit . ", "}} {{ end }}</p>
                 {{end}}
             </div>
             </div>
+            </a>
         </div>
     {{end}}
     </div>
@@ -63,6 +76,7 @@
     <div class="row">
     {{ range sort $people "Params.name.last" }}
         <div class="col-12">
+            <a href="{{.RelPermalink}}" style="text-decoration: none;  color: inherit;">
             <div class="row">
                 <div class="my-auto" style="width: 120px;">
                     <img src="/images/team/{{ .Params.photo }}" width="100px" style="align-items: center;" />
@@ -71,20 +85,20 @@
                     <p><b style="font-size: large; line-height: 100%;">{{ with .Params.name }}{{.first}} {{.last}}{{end}}</b></p>
                     <p>{{.Params.position}}</p>
                     {{ if .Params.advisors }}
-                        <p style="line-height: normal; margin-bottom: 1%;"><b>Advisors:</b> {{with .Params.advisors}} {{ delimit . ", "}}{{end}}<br> {{ with .Params.research_interests }} <b>Interests: </b>{{delimit . ", "}} {{ end }}</p> 
+                        <p style="line-height: normal; "><b>Advisors:</b> {{with .Params.advisors}} {{ delimit . ", "}}{{end}}</p> 
                     {{else if .Params.advisor}} 
-                        <p style="line-height: normal; margin-bottom: 1%;"><b>Advisor: </b>{{.Params.advisor }} <br> {{ with .Params.research_interests }} <b>Interests: </b>{{delimit . ", "}} {{ end }}</p>
+                        <p style="line-height: normal; "><b>Advisor: </b>{{.Params.advisor }} </p>
                     {{ else }}
-                        <p style="line-height: normal; margin-bottom: 1%;">{{ with .Params.research_interests }} <b>Interests: </b>{{delimit . ", "}} {{ end }}</p>
                     {{end}}
                 </div>
             </div>
+            </a>
         </div>
         {{ end }}
     </div>
 </div>
 {{ else }}
-<div class="container" style="margin-bottom: 1%;">
+<div class="container" style="">
   There are currently no {{.Params.group}} in the group.
 </div>
 {{ end }}
@@ -96,6 +110,7 @@
     <div class="row">
     {{ range sort $alumni "Params.name.last" }}
         <div class="col-4">
+            <a href="{{.RelPermalink}}" style="text-decoration: none;  color: inherit;">
             <div class="row">
             <div class="my-auto" style="width: 120px; text-align: center;">
                 <img src="/images/alumni/{{ .Params.photo }}" width="100px" style="align-items: center;" />
@@ -104,14 +119,14 @@
                 <p><b style="font-size: large; line-height: 100%;">{{ with .Params.name }}{{.first}} {{.last}}{{end}}</b></p>
                 <p>Former {{.Params.position}}</p>
                 {{ if .Params.advisors }}
-                        <p style="line-height: normal; margin-bottom: 1%;"><b>Advisors:</b> {{with .Params.advisors}} {{ delimit . ", "}}{{end}}<br> {{ with .Params.thesis}} <b>Thesis: </b>{{.}} {{ end }}</p>
+                        <p style="line-height: normal; "><b>Advisors:</b> {{with .Params.advisors}} {{ delimit . ", "}}{{end}}</p>
                     {{else if .Params.advisor}} 
-                        <p style="line-height: normal; margin-bottom: 1%;"><b>Advisor: </b>{{.Params.advisor }} <br> {{ with .Params.thesis}} <b>Thesis: </b>{{.}} {{ end }}</p>
+                        <p style="line-height: normal; "><b>Advisor: </b>{{.Params.advisor }} </p>
                     {{ else }}
-                        <p style="line-height: normal; margin-bottom: 1%;"> {{ with .Params.thesis}} <b>Thesis: </b>{{.}} {{ end }}</p>
                 {{end}}
             </div>
             </div>
+            </a>
         </div>
     {{end}}
     </div>
@@ -120,6 +135,7 @@
     <div class="row">
     {{ range sort $alumni "Params.name.last" }}
         <div class="col-6">
+            <a href="{{.RelPermalink}}" style="text-decoration: none;  color: inherit;">
             <div class="row">
             <div class="my-auto"style="width: 120px; text-align: center;">
                 <img src="/images/alumni/{{ .Params.photo }}" width="100px" style="align-items: center;" />
@@ -128,14 +144,14 @@
                 <p><b style="font-size: large; line-height: 100%;">{{ with .Params.name }}{{.first}} {{.last}}{{end}}</b></p>
                 <p>Former {{.Params.position}}</p>
                 {{ if .Params.advisors }}
-                        <p style="line-height: normal; margin-bottom: 1%;"><b>Advisors:</b> {{with .Params.advisors}} {{ delimit . ", "}}{{end}}<br> {{ with .Params.thesis}} <b>Thesis: </b>{{.}} {{ end }}</p>
+                        <p style="line-height: normal; "><b>Advisors:</b> {{with .Params.advisors}} {{ delimit . ", "}}{{end}}</p>
                     {{else if .Params.advisor}} 
-                        <p style="line-height: normal; margin-bottom: 1%;"><b>Advisor: </b>{{.Params.advisor }} <br> {{ with .Params.thesis}} <b>Thesis: </b>{{.}} {{ end }}</p>
+                        <p style="line-height: normal; "><b>Advisor: </b>{{.Params.advisor }} </p>
                     {{ else }}
-                        <p style="line-height: normal; margin-bottom: 1%;"> {{ with .Params.thesis}} <b>Thesis: </b>{{.}} {{ end }}</p>
                 {{end}}
             </div>
             </div>
+            </a>
         </div>
     {{ end }}
     </div>
@@ -144,6 +160,7 @@
     <div class="row">
     {{ range sort $alumni "Params.name.last" }}
         <div class="col-12">
+            <a href="{{.RelPermalink}}" style="text-decoration: none;  color: inherit;">
             <div class="row">
                 <div class="my-auto" style="width: 120px;">
                     <img src="/images/alumni/{{ .Params.photo }}" width="100px" style="align-items: center;" />
@@ -151,15 +168,15 @@
                 <div class="col my-auto" style="line-height: 80%;">
                     <p><b style="font-size: large; line-height: 100%;">{{ with .Params.name }}{{.first}} {{.last}}{{end}}</b></p>
                     <p>Former {{.Params.position}}</p>
-                    {{ if .Params.advisors }}
-                            <p style="line-height: normal; margin-bottom: 1%;"><b>Advisors:</b> {{with .Params.advisors}} {{ delimit . ", "}}{{end}}<br> {{ with .Params.thesis}} <b>Thesis: </b>{{.}} {{ end }}</p>
+                        {{ if .Params.advisors }}
+                            <p style="line-height: normal; "><b>Advisors:</b> {{with .Params.advisors}} {{ delimit . ", "}}{{end}}</p>
                         {{else if .Params.advisor}} 
-                            <p style="line-height: normal; margin-bottom: 1%;"><b>Advisor: </b>{{.Params.advisor }} <br> {{ with .Params.thesis}} <b>Thesis: </b>{{.}} {{ end }}</p>
+                            <p style="line-height: normal; "><b>Advisor: </b>{{.Params.advisor }} </p>
                         {{ else }}
-                            <p style="line-height: normal; margin-bottom: 1%;"> {{ with .Params.thesis}} <b>Thesis: </b>{{.}} {{ end }}</p>
-                    {{end}}
+                        {{end}}
                 </div>
             </div>
+            </a>
         </div>
         {{ end }}
     </div>

@@ -11,6 +11,10 @@ name:
 photo:
 class: faculty
 position: 
+mentor: 
+mentors:
+  1:
+  2:
 start_date: 
 email:
 homepage: 

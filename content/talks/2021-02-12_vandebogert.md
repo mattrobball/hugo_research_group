@@ -1,10 +1,14 @@
 ---
+agnt_event: true
 event_name: Algebra, Geometry, and Number Theory Seminar 
 event_organization: University of South Carolina 
 event_url: https://www.scagnt.org/seminar/2021/
 event_date: 2021-02-12
 time: 2:30-3:30pm
-speaker: Keller Vandebogert
+speaker: 
+  first: Keller 
+  middle: 
+  last: VandeBogert
 speaker_url: https://sites.google.com/view/kellervandebogert/
 speaker_affiliation: University of South Carolina
 speaker_affiliation_abbr: UofSC 

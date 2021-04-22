@@ -3,6 +3,8 @@ title: "Matthew Ballard - SCAGNT @ UofSC"
 description: "Faculty summary for the Algebra, Geometry, and Number Theory research group at the University of South Carolina"
 draft: false
 katex: true
+type: team
+layout: single
 name: 
   first: Matthew 
   middle: Robert
@@ -57,3 +59,5 @@ mathscinet_id: 861551
 orchid_id: 0000-0001-5819-0159
 google_scholar: 4ZhyZRgAAAAJ
 ---
+
+Yo

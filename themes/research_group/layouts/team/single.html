@@ -1,0 +1,33 @@
+{{ define "main" }}
+
+<div class="container">
+
+
+{{ if in .RelPermalink "/alumni/" }}
+<img src="/images/alumni/{{ .Params.photo }}" width="150px" class="img-responsive" />
+{{ else }}
+<img src="/images/team/{{ .Params.photo }}" width="150px" class="img-responsive" />
+{{ end }}
+
+{{.Content}}
+
+{{ if eq .Params.class "faculty"}}
+
+{{ else if eq .Params.class "graduate students" }}
+
+{{ else if eq .Params.class "undergraduate students "}}
+
+{{ else if eq .Params.class "visitors"}}
+
+{{ else if eq .Params.class "alumni" }}
+
+{{ else }}
+
+Error. 
+
+{{ end }}
+
+</div>
+
+<!-- EOF -->
+{{ end }}

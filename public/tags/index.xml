@@ -5,22 +5,23 @@
     <link>https://www.scagnt.org/tags/</link>
     <description>Recent content in Tags on Algebra, Geometry, and Number Theory at the University of South Carolina</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://www.scagnt.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Mon, 12 Apr 2021 15:49:41 -0400</lastBuildDate><atom:link href="https://www.scagnt.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Research</title>
+      <link>https://www.scagnt.org/tags/research/</link>
+      <pubDate>Mon, 12 Apr 2021 15:49:41 -0400</pubDate>
+      
+      <guid>https://www.scagnt.org/tags/research/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Learning</title>
       <link>https://www.scagnt.org/tags/learning/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.scagnt.org/tags/learning/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Research</title>
-      <link>https://www.scagnt.org/tags/research/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.scagnt.org/tags/research/</guid>
       <description></description>
     </item>
     

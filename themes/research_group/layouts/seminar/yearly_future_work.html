@@ -1,0 +1,29 @@
+{{define "main"}}
+
+{{ .Content }}
+
+<hr>
+
+{{- $slice := (.Site.GetPage "/talks/index.md").Resources.ByType "page" -}}
+{{- $slice = where $slice "Params.event_name" .Params.event_name -}}
+{{- $slice = where $slice "Params.event_organization" .Params.event_organization -}}
+{{- $cut -}}
+{{- range $slice -}}
+    {{ $year := dateFormat "2006" .Params.event_date }}
+    {{ $year2 := string .year }}
+    {{ if eq $year $year2 }}
+        {{ $cut = $cut | append . }}
+    {{ end }}
+{{ end }}
+{{ $talks := dict }}
+{{- range $cut -}}
+    {{ $talks.Scratch.Set "header1" slice ((dateFormat "January 2" .Params.event_date) .Params.time) }}
+    {{ $talks.Scratch.Set ""}}
+{{- end -}}
+
+{{ $headers := slice "Date & Time" "Speaker" "Title" "Abstract" }}
+{{ $keys := slice "date" "time"}}
+
+{{- partial "table.html" (dict "entries" $talks "headers" $headers) -}}
+
+{{end}}

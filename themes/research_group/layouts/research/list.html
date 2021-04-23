@@ -4,13 +4,11 @@
 
 {{.Content}}
 
-<h2>Active Funding</h2>
-
-<h2>Upcoming talks by group members</h2>
+{{- partial "active_grants.html" . }}
 
 {{- partial "research_upcoming_talks.html" . -}}
 
-<h2>Recorded research talks by group members</h2>
+{{- partial "research_recorded.html" . -}}
 
 </div>
 

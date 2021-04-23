@@ -19,7 +19,7 @@ Below you can find information for the scheduled talks coming up within the next
     
     {{ $talk_number := 0 }}
     {{ range sort $talks "Params.event_date" "asc"}}
-    {{if and (( time .Params.event_date ).After (now)) (( time .Params.event_date).Before (now.AddDate 0 1 0)) }}
+    {{if and (( time .Params.event_date ).After (now.AddDate 0 0 -1)) (( time .Params.event_date).Before (now.AddDate 0 1 0)) }}
     <tbody>
         <tr {{ if eq (mod $talk_number 2) 0 }}
               style="background-color: rgba(211,211,211,.3);"

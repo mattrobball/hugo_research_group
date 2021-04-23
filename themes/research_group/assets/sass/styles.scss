@@ -222,6 +222,13 @@ pubtit {
     padding-bottom: 0px;
 }
 
+// For responsive videos
+video {
+    /* override other styles to make responsive */
+    width: 100%    !important;
+    height: auto   !important;
+}
+
 // /* De-bugging overflowing elements */
 // * {
 //     background: #000 !important;

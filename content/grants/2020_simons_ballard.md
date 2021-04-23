@@ -5,22 +5,21 @@ draft: false
 katex: true
 pis:
   1: 
-    first:
+    first: Matthew
     middle:
-    last:
+    last: Ballard
 copis:
   1:
     first:
     middle:
-    last:
-agency:
-agency_url:
+    last: 
+agency: Simons Foundation 
+agency_url: https://www.simonsfoundation.org 
 agency_icon:
-start_date:
-end_date:
-proposal_title:
-proposal_number:
+start_date: 2020-09-01
+end_date: 2025-08-31
+proposal_title: Derived categories in algebraic and arithmetic geometry
+award_number: 708132
 proposal_url: 
-proposal_summary: 
-total_amount: 
+total_amount: 42000
 ---

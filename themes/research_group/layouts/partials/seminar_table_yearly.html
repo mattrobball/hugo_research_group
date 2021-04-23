@@ -14,7 +14,7 @@
 {{ $upcoming := slice }}
 {{ $past := slice }}
 {{ range $cut }}
-{{ if ( time .Params.event_date ).After (now) }}
+{{ if ( time .Params.event_date ).After (now.AddDate 0 0 -1) }}
   {{ $upcoming = $upcoming | append . }}
 {{ else }}
   {{ $past = $past | append . }}

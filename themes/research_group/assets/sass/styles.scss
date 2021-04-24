@@ -197,8 +197,6 @@ pubtit {
     }
 }
 
-
-
 // toggles for the brand 
 @media (max-width: 1020px) {
     .big-brand {
@@ -210,7 +208,6 @@ pubtit {
         display: none;
     }
 }
-
 
 // removing some extra space in the collapsible drop downs
 .card {
@@ -227,6 +224,24 @@ video {
     /* override other styles to make responsive */
     width: 100%    !important;
     height: auto   !important;
+}
+
+.container-vid {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+  }
+  
+  /* Then style the iframe to fit in the container div with full height and width */
+  .responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
 }
 
 // /* De-bugging overflowing elements */

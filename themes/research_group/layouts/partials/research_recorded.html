@@ -20,12 +20,13 @@
 {{ if gt (len $talks) 0 }}
 <h3>Past talks by group members</h3>
   <div class="row">
-  {{ range sort $talks "Params.event_date" "asc"}}
+  {{ range sort $talks "Params.event_date" "desc"}}
     <div class="col-md-6">
-      <video controls>
-        <source src="{{.Params.recording_url}}" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+      <div class="container-vid"> 
+        <iframe class="responsive-iframe" src="{{.Params.recording_url}}" title="Talk by {{with .Params.speaker}}
+        {{.first}} {{.last}}
+        {{ end }}"></iframe>
+      </div>
       <br>
       <p>
       {{with .Params.speaker}}
@@ -39,9 +40,3 @@
     {{ end }}
   </div>
 {{ end }}
-
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/UdJKKDFT8zI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
-<iframe src="http://videos.birs.ca/2019/19w5164/201911121631-Ballard.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

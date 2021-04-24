@@ -21,6 +21,7 @@
 <h3>Past talks by group members</h3>
   <div class="row">
   {{ range sort $talks "Params.event_date" "desc"}}
+    {{if in .Params.recording_url "youtube"}}
     <div class="col-md-6">
       <div class="container-vid"> 
         <iframe class="responsive-iframe" src="{{.Params.recording_url}}" title="Talk by {{with .Params.speaker}}
@@ -37,6 +38,23 @@
       {{ dateFormat "January 2, 2006" .Params.event_date }}
       </p>
     </div>
+    {{ else }}
+    <div class="col-md-6">
+        <video controls>
+          <source src="{{.Params.recording_url}}" type="video/mp4">
+          Your browser does not support this video.
+        </video>
+      <br>
+      <p>
+      {{with .Params.speaker}}
+      {{.first}} {{.last}},
+      {{ end }} 
+      {{ .Params.title }}.
+      {{ .Params.event_name }}.
+      {{ dateFormat "January 2, 2006" .Params.event_date }}
+      </p>
+    </div>
+    {{ end }}
     {{ end }}
   </div>
 {{ end }}

@@ -38,14 +38,46 @@
       {{ dateFormat "January 2, 2006" .Params.event_date }}
       </p>
     </div>
+    {{ else if in .Params.recording_url "birs"}}
+    <div class="col-md-6">
+      <video preload="metadata" poster="/images/logos/birs.jpg" controls>
+        <source src="{{.Params.recording_url}}" type="video/mp4">
+        Your browser does not support this video.
+      </video>
+    <br>
+    <p style="margin-top: 5%;">
+    {{with .Params.speaker}}
+    {{.first}} {{.last}},
+    {{ end }} 
+    {{ .Params.title }}.
+    {{ .Params.event_name }}.
+    {{ dateFormat "January 2, 2006" .Params.event_date }}
+    </p>
+    </div>
+    {{ else if in .Params.recording_url "msri"}}
+    <div class="col-md-6">
+      <video preload="metadata" poster="/images/logos/msri.jpg" controls>
+        <source src="{{.Params.recording_url}}" type="video/mp4">
+        Your browser does not support this video.
+      </video>
+    <br>
+    <p style="margin-top: 5%;">
+    {{with .Params.speaker}}
+    {{.first}} {{.last}},
+    {{ end }} 
+    {{ .Params.title }}.
+    {{ .Params.event_name }}.
+    {{ dateFormat "January 2, 2006" .Params.event_date }}
+    </p>
+    </div>
     {{ else }}
     <div class="col-md-6">
-        <video controls>
+        <video preload="metadata" poster="/images/funding/uofsc.png" controls>
           <source src="{{.Params.recording_url}}" type="video/mp4">
           Your browser does not support this video.
         </video>
       <br>
-      <p>
+      <p style="margin-top: 5%;">
       {{with .Params.speaker}}
       {{.first}} {{.last}},
       {{ end }} 

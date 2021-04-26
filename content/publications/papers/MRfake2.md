@@ -2,13 +2,13 @@
 entry: article # options are arxiv_preprint, article, book, booklet, inbook, incollection, inproceedings, manual, mastersthesis, misc, phdthesis, proceedings, techreport, unpublished
 authors: 
   1:  
-    first: Matthew
-    middle: Robert
-    last: Ballard
-  2:  
-    first: E
+    first: Lil
     middle: 
-    last: "40"
+    last: John
+  2:  
+    first: YEA
+    middle: 
+    last: AAH
 title: Abbacadabra
 edition: "" 
 abstract: We prove that the bounded derived category of coherent sheaves with proper support is equivalent to the category of locally-finite, cohomological functors on the perfect derived category of a quasi-projective scheme over a field. We introduce the notions of pseudo-adjoints and Rouquier functors and study them. As an application of these ideas and results, we extend the reconstruction result of Bondal and Orlov to Gorenstein projective varieties.

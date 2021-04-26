@@ -9,7 +9,7 @@ name:
   first: Jonathan 
   last: Smith
 photo: smith_jonathan.jpg
-year_started: 2019
+start_date: 2019-08-15
 advisor: Alexander Duncan
 # research_interests:
 #   1: 

@@ -1,4 +1,11 @@
-{{- .Params.author -}}. &nbsp{{- .Params.title -}}. &nbsp<i>{{- .Params.journal -}}</i> 
+{{ $authors := slice }}
+{{ range .Params.authors }}
+    {{ $authors = $authors | append (printf "%s %s" .first .last) }}
+{{ end }}
+{{ with $authors }}
+    {{ delimit . ", " }}.
+{{ end }}
+&nbsp{{- .Params.title -}}. &nbsp<i>{{- .Params.journal -}}</i> 
 {{- with .Params.volume -}}
     &nbsp{{- . -}}
 {{- end -}} 

@@ -11,7 +11,8 @@ class: graduate students
 position: PhD student
 advisor: Matthew Ballard
 thesis: Windows and generalized Drinfeld kernels
-graduation_year: 2020
+start_date: 2014-08-15
+end_date: 2020-05-08
 homepage: https://robertvandermolen.github.io
 current_position: 
   name: Assistant Professor

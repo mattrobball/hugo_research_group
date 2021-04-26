@@ -9,7 +9,7 @@ name:
   first: Bailey
   last: Heath
 photo: heath_bailey.jpg
-year_started: 2019
+start_date: 2019-08-15
 advisor: Alexander Duncan
 # research_interests:
 #   1: 

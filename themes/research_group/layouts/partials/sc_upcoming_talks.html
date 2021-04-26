@@ -5,15 +5,13 @@
 {{ if eq (len $talks) 0 }}
 {{else}}
 
-Below you can find information for the scheduled talks coming up within the next month. We occasionally include other local events as appropriate. <br>
+Below you can find information for the group-associated events coming up within the next month. <br>
 
 <table class="table align-middle"> 
     <thead>
       <tr>
         <th scope="col">Date & Time</th>
         <th scope="col">Event</th>
-        <th scope="col">Speaker</th>
-        <th scope="col">Title</th>
       </tr>
     </thead>
     
@@ -24,14 +22,12 @@ Below you can find information for the scheduled talks coming up within the next
         <tr {{ if eq (mod $talk_number 2) 0 }}
               style="background-color: rgba(211,211,211,.3);"
             {{ end }}>
-          <td><b>{{ dateFormat "Monday" .Params.event_date }}</b>, <br> {{ dateFormat "January 2" .Params.event_date }} <br> {{.Params.time}}</td> 
+          <td><b>{{ dateFormat "Monday" .Params.event_date }}, {{ dateFormat "January 2" .Params.event_date }}</b> <br> {{.Params.time}}</td> 
           {{ if .Params.event_url }}
           <td> <a href="{{.Params.event_url}}"> {{.Params.event_name }} </a> </td>
           {{ else }}
           <td> {{.Params.event_name }} </td>
           {{ end }}
-          <td>{{ with .Params.speaker }} {{.first}} {{.last}} {{ end }} </td>
-          <td>{{ .Params.title }}</td>
         </tr>
     </tbody>
     {{ $talk_number = add $talk_number 1}}

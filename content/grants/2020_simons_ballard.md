@@ -8,11 +8,11 @@ pis:
     first: Matthew
     middle:
     last: Ballard
-copis:
-  1:
-    first:
-    middle:
-    last: 
+# copis:
+#   1:
+#     first:
+#     middle:
+#     last: 
 agency: Simons Foundation 
 agency_url: https://www.simonsfoundation.org 
 agency_icon:

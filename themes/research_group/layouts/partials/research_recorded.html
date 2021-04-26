@@ -40,7 +40,7 @@
     </div>
     {{ else if in .Params.recording_url "birs"}}
     <div class="col-md-6">
-      <video preload="metadata" poster="/images/logos/birs.jpg" controls>
+      <video poster="/images/logos/birs.jpg" controls>
         <source src="{{.Params.recording_url}}" type="video/mp4">
         Your browser does not support this video.
       </video>

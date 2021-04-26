@@ -10,13 +10,13 @@ name:
   last: McFaddin
 photo: mcfaddin_patrick.jpeg
 position: Postdoc
-advisors: 
+mentors: 
   1: Matthew Ballard
   2: Alexander Duncan
-thesis: 
-graduation_year: 
+start_date: 2016-08-15
+end_date: 2019-05-15
 homepage: https://mcfaddin.github.io/
 current_position: 
-  name:
-  institution: 
+  name: Assistant Professor
+  institution: Fordham University
 ---

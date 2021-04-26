@@ -9,7 +9,7 @@ name:
   first: Keller
   last: VandeBogert
 photo: vandebogert_keller.jpg
-year_started: 2017
+start_date: 2017-08-15
 advisors: 
   1: Matthew Ballard
   2: Andrew Kustin

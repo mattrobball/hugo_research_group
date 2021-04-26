@@ -23,8 +23,8 @@ googleAnalytics = "G-8S5KWYDY30"
     url = "/publications/"
     weight = 4
   [[menu.nav]]
-    name = "Seminars"
-    url = "/seminar/"
+    name = "Events"
+    url = "/events/"
     weight = 5
   [[menu.nav]]
     name = "Courses"

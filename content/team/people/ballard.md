@@ -60,4 +60,4 @@ orchid_id: 0000-0001-5819-0159
 google_scholar: 4ZhyZRgAAAAJ
 ---
 
-Yo
+I study algebraic geometry and am particularly interested in questions arising from Homological Mirror Symmetry. Much of my work focuses on derived categories and their relation to more classical questions. Some of my recent work studies the derived geometry of birational maps, investigates the ties between rational points and rational parameterizations and the structure of the derived category, and develops derived approaches to noncommutative algebraic geometry. My research has been partially supported by the Simons Foundation and the National Science Foundation. It has also benefited from a membership at the Institute for Advanced Study and funding from UofSC and the Southeastern Conference. 

@@ -2,30 +2,15 @@
 
 <div class="container">
 
-
-{{ if in .RelPermalink "/alumni/" }}
-<img src="/images/alumni/{{ .Params.photo }}" width="150px" class="img-responsive" />
-{{ else }}
-<img src="/images/team/{{ .Params.photo }}" width="150px" class="img-responsive" />
-{{ end }}
+{{ partial "team_header.html" . }}
 
 {{.Content}}
 
-{{ if eq .Params.class "faculty"}}
+<hr>
 
-{{ else if eq .Params.class "graduate students" }}
+{{ partial "papers_per_person.html" . }}
 
-{{ else if eq .Params.class "undergraduate students "}}
-
-{{ else if eq .Params.class "visitors"}}
-
-{{ else if eq .Params.class "alumni" }}
-
-{{ else }}
-
-Error. 
-
-{{ end }}
+{{ partial "grants_per_person.html" . }}
 
 </div>
 

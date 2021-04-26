@@ -1,13 +1,13 @@
 ---
-title: "2018 Seminar - AGNT @ UofSC"
+title: "2013 Seminar - AGNT @ UofSC"
 description: "Talk and schedule information for a seminar of the Algebra, Geometry, and Number Theory group at the Univesity of South Carolina"
 layout: yearly
 draft: false
 katex: true
 event_name: Algebra, Geometry, and Number Theory Seminar 
 event_organization: University of South Carolina 
-year: 2018
-nav: Seminars
+year: 2013
+nav: Events
 categories:
 - Seminar 
 tags:
@@ -15,7 +15,7 @@ tags:
 - Learning # research, learning, ... 
 ---
 {{<center>}}
-## 2018 Seminar Schedule
+## 2013 Seminar Schedule
 {{</center>}}
 
 --------------

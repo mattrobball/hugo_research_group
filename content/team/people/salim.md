@@ -9,7 +9,7 @@ name:
   first: Demmas
   last: Salim
 photo: oh_yeah.png
-year_started: 2017
+start_date: 2017-08-15
 advisor: Frank Thorne
 # research_interests:
 #   1: 

@@ -214,7 +214,6 @@ pubtit {
     padding-bottom: 0px;
 }
 
-
 .clearfix {
     padding-bottom: 0px;
 }
@@ -225,6 +224,7 @@ video {
     width: 100%    !important;
     height: auto   !important;
 }
+
 
 .container-vid {
     position: relative;
@@ -243,6 +243,12 @@ video {
     width: 100%;
     height: 100%;
 }
+
+/* Fixing the image sizes for team members pages */
+.fixed-image {
+    -ms-flex: 0 0 175px;
+    flex: 0 0 175px;
+} 
 
 // /* De-bugging overflowing elements */
 // * {

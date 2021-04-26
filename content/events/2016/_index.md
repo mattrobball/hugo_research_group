@@ -7,7 +7,7 @@ katex: true
 event_name: Algebra, Geometry, and Number Theory Seminar 
 event_organization: University of South Carolina 
 year: 2016
-nav: Seminars
+nav: Events
 categories:
 - Seminar 
 tags:

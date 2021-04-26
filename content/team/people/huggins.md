@@ -9,7 +9,7 @@ name:
   first: Tracy
   last: Huggins
 photo: oh_yeah.png
-year_started: 2016
+start_date: 2016-08-15
 advisor: Alexander Duncan
 research_interests:
   1: Essential dimension

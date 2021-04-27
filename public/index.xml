@@ -8,6 +8,15 @@
     <language>en-us</language>
     <lastBuildDate>Mon, 12 Apr 2021 19:29:17 -0400</lastBuildDate><atom:link href="https://www.scagnt.org/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Welcome</title>
+      <link>https://www.scagnt.org/blog/welcome/</link>
+      <pubDate>Tue, 27 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.scagnt.org/blog/welcome/</guid>
+      <description>Welcome! Welcome to the research blog of the Algebra, Geometry, and Number Theory group at the University of South Carolina. We hope to use this space to share some knowledge and make connections with people near and far.</description>
+    </item>
+    
+    <item>
       <title> - AGNT @ UofSC</title>
       <link>https://www.scagnt.org/team/alumni/lamarche/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -98,7 +107,7 @@
     </item>
     
     <item>
-      <title>Matthew Ballard - SCAGNT @ UofSC</title>
+      <title>Matthew Ballard - AGNT @ UofSC</title>
       <link>https://www.scagnt.org/team/people/ballard/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       

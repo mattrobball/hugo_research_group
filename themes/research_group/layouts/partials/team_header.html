@@ -28,11 +28,17 @@
 {{with .Params.google_scholar }}
 &nbsp; <a href="https://scholar.google.com/citations?user={{.}}&hl=en"><img src="https://scholar.google.com/favicon.ico" style="width:1.5em;margin-right:.5em;" alt="Google Scholar icon" title="Google Scholar"></a> 
 {{ end }}
+{{ with .Params.math_genealogy }}
+&nbsp; <a href="https://www.mathgenealogy.org/id.php?id={{.}}"><img src="https://www.mathgenealogy.org/favicon.ico" style="width:1.5em;margin-right:.5em;" alt="Math Genealogy icon" title="Math Genealogy"></a>
+{{ end }}
 {{ with .Params.mathscinet_id }}
 &nbsp; <a href="https://mathscinet.ams.org/mathscinet/search/author.html?mrauthid={{.}}"><img src="https://www.ams.org/images/Logo-Favicon.png" style="width:1.5em;margin-right:.5em;" alt="AMS icon" title="MathSciNet"></a>
 {{ end }}
 {{with .Params.orchid_id }}
 &nbsp; <a href="https://orcid.org/{{.}}" target="orcid.widget" rel="noopener noreferrer"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1.5em;margin-right:.5em;" alt="ORCID iD icon" title="ORCID"></a> 
+{{ end }}
+{{ with .Params.zentralblatt_id }}
+&nbsp; <a href="https://www.zbmath.org/authors/?q=ai%3A{{.}}"><img src="https://www.zbmath.org/favicon.ico" style="width:1.5em;margin-right:.5em;" alt="Zentralblatt icon" title="Zentralblatt"></a>
 {{ end }}
 </div>
 </div>
@@ -80,12 +86,18 @@ Currently {{.name}} at {{.institution}} <br>
 {{with .Params.google_scholar }}
 &nbsp; <a href="https://scholar.google.com/citations?user={{.}}&hl=en"><img src="https://scholar.google.com/favicon.ico" style="width:1.5em;margin-right:.5em;" alt="Google Scholar icon" title="Google Scholar"></a> 
 {{ end }}
+{{ with .Params.math_genealogy }}
+&nbsp; <a href="https://www.mathgenealogy.org/id.php?id={{.}}"><img src="https://www.mathgenealogy.org/favicon.ico" style="width:1.5em;margin-right:.5em;" alt="Math Genealogy icon" title="Math Genealogy"></a>
+{{ end }}
 {{ with .Params.mathscinet_id }}
 &nbsp; <a href="https://mathscinet.ams.org/mathscinet/search/author.html?mrauthid={{.}}"><img src="https://www.ams.org/images/Logo-Favicon.png" style="width:1.5em;margin-right:.5em;" alt="AMS icon" title="MathSciNet"></a>
 {{ end }}
 {{with .Params.orchid_id }}
 &nbsp; <a href="https://orcid.org/{{.}}" target="orcid.widget" rel="noopener noreferrer"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1.5em;margin-right:.5em;" alt="ORCID iD icon" title="ORCID"></a> 
 {{ end }}
+{{ with .Params.zentralblatt_id }}
+&nbsp; <a href="https://www.zbmath.org/authors/?q=ai%3A{{.}}"><img src="https://www.zbmath.org/favicon.ico" style="width:1.5em;margin-right:.5em;" alt="Zentralblatt icon" title="Zentralblatt"></a>
+{{ end }}
 </div>
 </div>
-{{end}}
+{{ end }}

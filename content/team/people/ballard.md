@@ -1,5 +1,5 @@
 ---
-title: "Matthew Ballard - SCAGNT @ UofSC"
+title: "Matthew Ballard - AGNT @ UofSC"
 description: "Faculty summary for the Algebra, Geometry, and Number Theory research group at the University of South Carolina"
 draft: false
 katex: true
@@ -56,8 +56,10 @@ funding:
   2:
 arxiv_id: ballard_m_1
 mathscinet_id: 861551 
+zentralblatt_id: ballard.matthew-robert
 orchid_id: 0000-0001-5819-0159
 google_scholar: 4ZhyZRgAAAAJ
+math_genealogy: 132733
 ---
 
 I study algebraic geometry and am particularly interested in questions arising from Homological Mirror Symmetry. Much of my work focuses on derived categories and their relation to more classical questions. Some of my recent work studies the derived geometry of birational maps, investigates the ties between rational points and rational parameterizations and the structure of the derived category, and develops derived approaches to noncommutative algebraic geometry. My research has been partially supported by the Simons Foundation and the National Science Foundation. It has also benefited from a membership at the Institute for Advanced Study and funding from UofSC and the Southeastern Conference. 

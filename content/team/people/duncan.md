@@ -63,6 +63,7 @@ funding:
     duration:
 arxiv_id: 
 mathscinet_id: 854896
-orchid_id: 
+zentralblatt_id: duncan.alexander
+orchid_id: 0000-0003-4355-8402
 google_scholar: 
 ---

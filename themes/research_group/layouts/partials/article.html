@@ -1,18 +1,35 @@
+{{ $bib := slice }}
 {{ $authors := slice }}
 {{ range .Params.authors }}
     {{ $authors = $authors | append (printf "%s %s" .first .last) }}
 {{ end }}
 {{ with $authors }}
-    {{ delimit . ", " }}.
+    {{ $bib = $bib | append (delimit . ", " " and ") }}
 {{ end }}
-&nbsp{{- .Params.title -}}. &nbsp<i>{{- .Params.journal -}}</i> 
+{{ with .Params.title }}
+    {{ $emtitle := printf "<i>%s</i>" . }}
+    {{ $bib = $bib | append $emtitle }}
+{{ end }}
+{{ $string := "" }}
+{{- with .Params.journal -}}
+    {{ $string = printf "%s %s" $string . }}
+{{ end }}
 {{- with .Params.volume -}}
-    &nbsp{{- . -}}
+    {{ $string = printf "%s <b>%s</b>" $string . }}
 {{- end -}} 
-&nbsp({{- .Params.year -}})
-{{- with .Params.number -}}
-, no. {{- . -}}
+{{- with .Params.year -}}
+    {{ $string = printf "%s (%s)" $string . }}
 {{- end -}}
-{{- with  .Params.pages -}}
-, {{ . }}
-{{- end -}}. 
+{{ if ne $string "" }}
+    {{ $bib = $bib | append $string }}
+{{ end }}
+{{- with .Params.number -}}
+    {{ $bib = $bib | append (printf "no. %s" .)}}
+{{- end -}}
+{{- with .Params.pages -}}
+    {{ $bib = $bib | append (printf "pp. %s" . )}}
+{{- end -}}
+{{- with .Params.note -}}
+    {{ $bib = $bib | append . }}
+{{- end -}}
+{{ delimit $bib ", "}}.

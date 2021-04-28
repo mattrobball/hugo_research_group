@@ -2,7 +2,9 @@
 
 {{ $name := string $.Params.entry }}
 
-{{ if eq $name "article" }} <!-- Temporary fix -->
+{{ $sofar := slice "article" "book" "booklet" "inbook" "incollection" "inproceedings" "manual" "mastersthesis" }}
+
+{{ if in $sofar $name }} <!-- Temporary fix -->
 
 {{- partial $name . -}}
 

@@ -9,6 +9,15 @@ authors:
     first:
     middle:
     last: 
+editors:
+  1:
+    first:
+    middle:
+    last:
+  2:
+    first:
+    middle:
+    last: 
 title: ""
 edition: "" 
 abstract: "" 
@@ -30,6 +39,7 @@ hyperlink: ""
 note: "" 
 publisher: ""
 arxiv_id: ""
+zentralblatt_id:  
 image: 
 news: 
 draft: false 

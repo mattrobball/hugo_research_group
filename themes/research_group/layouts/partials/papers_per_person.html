@@ -2,12 +2,13 @@
 {{ $papers := slice }}
 {{ $slice := (.GetPage "/publications/papers/index.md").Resources.ByType "page" }}
 {{ $person := printf "%s%s" .Params.name.first .Params.name.last  }}
-{{ $authors := "" }}
+{{ $last_name := printf "%s" .Params.name.last }}
 {{ range $slice }}
+    {{ $authors := "" }}
     {{ range .Params.authors }}
         {{ $authors = print $authors (printf "%s%s" .first .last) }}
     {{ end }}
-    {{ if in $authors $person }}
+    {{ if in $authors $last_name }}
         {{ $papers = $papers | append . }}
     {{ end }}
 {{ end }}

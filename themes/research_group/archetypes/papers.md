@@ -26,7 +26,7 @@ mrclass:
 mrnumber:
 doi: ""
 isbn: 
-url: ""
+hyperlink: ""
 note: "" 
 publisher: ""
 arxiv_id: ""

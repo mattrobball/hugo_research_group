@@ -2,4 +2,8 @@
 
 {{ $name := string $.Params.entry }}
 
+{{ if eq $name "article" }} <!-- Temporary fix -->
+
 {{- partial $name . -}}
+
+{{ end }}

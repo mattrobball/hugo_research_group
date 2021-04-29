@@ -2,7 +2,7 @@
 
 {{ $name := string $.Params.entry }}
 
-{{ $sofar := slice "article" "book" "booklet" "inbook" "incollection" "inproceedings" "manual" "mastersthesis" }}
+{{ $sofar := slice "article" "book" "booklet" "inbook" "incollection" "inproceedings" "manual" "mastersthesis" "misc" "phdthesis" "techreport" "unpublished"}}
 
 {{ if in $sofar $name }} <!-- Temporary fix -->
 

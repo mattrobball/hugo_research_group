@@ -1,10 +1,13 @@
 <!-- Get the unique years of publications and sort them in ascending order -->
 {{ $years := slice }}
+{{ $authors_last := slice }}
 {{ $slice := (.GetPage "papers/index.md").Resources.ByType "page" }}
 {{ range $slice }}
 	{{ $years = $years | append .Params.year }}
+  {{/* $authors_last = $authors_last | append .Params.all_authors_last */}}
 {{ end }}
 {{ $years = uniq $years | sort }}
+{{ $authors_last = uniq $authors_last | sort }}
 {{ $length := len $years }}
 
 {{$i := 0}} <!-- Initialize a counter to label items uniquely -->
@@ -21,6 +24,8 @@
   </thead> 
   
   {{ $j := 0 }}
+  {{/* range $authors_last */}}
+  {{/* range where (where $slice ".Params.all_authors_last" . ) ".Params.year" $year */}}
   {{ range where $slice ".Params.year" $year }} <!-- Loop over all the publications with the matching year -->
   <tbody class="accordion-header" id="flush-heading{{ $i }}">
       <tr {{ if eq (mod $j 2) 0 }}
@@ -33,8 +38,7 @@
           <td colspan="2" style="padding: 0 !important;">
               <div id="flush-collapse{{ $i }}" class="accordion-collapse collapse" aria-labelledby="flush-heading{{ $i }}" >
                   <div class="card card-body">
-                    <p> 
-                        {{with .Params.abstract}}
+                    <p> {{with .Params.abstract}}
                         {{.}} <br>
                         {{ end }}
                         {{ with .Params.arxiv_id }}
@@ -74,15 +78,14 @@
         <tr {{ if eq (mod $l 2) 0 }}
             style="background-color: rgba(211,211,211,.3);"
             {{ end }} >
-        <td> {{- partial "gen_bib.html" . -}} </td>
+        <td> {{ .Params.firstauthorlast }} {{- partial "gen_bib.html" . -}} </td>
         <td class="accordion-header" id="flush-heading{{ $i }}"><div class="accordion-toggle collapsed text-center" data-bs-toggle="collapse" data-bs-target="#flush-collapse{{ $i }}" aria-expanded="false" aria-controls="flush-collapse{{ $i }}"></div></td>
       </tr>
       <tr>
           <td colspan="2" style="padding: 0 !important;">
               <div id="flush-collapse{{ $i }}" class="accordion-collapse collapse" aria-labelledby="flush-heading{{ $i }}" >
                   <div class="card card-body">
-                    <p> 
-                        {{with .Params.abstract}}
+                    <p> {{with .Params.abstract}}
                         {{.}} <br>
                         {{ end }}
                         {{ with .Params.arxiv_id }}

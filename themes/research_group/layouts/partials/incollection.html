@@ -39,11 +39,11 @@
     {{ $bib = $bib | append printf "%s ed." . }}
 {{ end }}
 {{ $date := "" }}
-{{ with .Params.month }}
+{{ with .Params.year }}
     {{ $date = printf "%s" . }}
 {{ end }}
-{{ with .Params.year }}
-    {{ $date = printf "%s %s" . }}
+{{ with .Params.month }}
+    {{ $date = printf "%s %s" . $string }}
 {{ end }}
 {{ if $date }}
     {{ $bib = $bib | append $date }}

@@ -1,4 +1,4 @@
-{ $bib := slice }}
+{{ $bib := slice }}
 {{ $authors := slice }}
 {{ range .Params.authors }}
     {{ $authors = $authors | append (printf "%s %s" .first .last) }}
@@ -9,8 +9,10 @@
 {{ with .Params.title }}
     {{ $bib = $bib | append (printf "<i>%s</i>" . ) }}
 {{ end }}
-{{ $bib = $bib | append "Master's thesis "}}
-{{ with .Params.school }}
+{{ with .Params.number }}
+    {{ $bib = $bib | append (printf "Tech Report %s" . )}}
+{{ end }}
+{{ with .Params.institution }}
     {{ $bib = $bib | append . }}
 {{ end }}
 {{ with .Params.address }}
@@ -23,7 +25,7 @@
 {{ with .Params.month }}
     {{ $date = printf "%s %s" . $date }}
 {{ end }}
-{{ if ne $date ""}}
+{{ if $date }}
     {{ $bib = $bib | append $date }}
 {{ end }}
 {{ with .Params.note }}

@@ -15,12 +15,16 @@
 {{- with .Params.address -}}
     {{ $bib = $bib | append . }}
 {{- end -}}
-{{- with .Params.month -}}
-    {{ $bib = $bib | append . }}
-{{- end -}}
-{{- with .Params.year -}}
-    {{ $bib = $bib | append . }}
-{{- end -}}
+{{ $date := "" }}
+{{ with .Params.year }}
+    {{ $date = printf "%s" . }}
+{{ end }}
+{{ with .Params.month }}
+    {{ $date = printf "%s %s" . $date }}
+{{ end }}
+{{ if $date }}
+    {{ $bib = $bib | append $date }}
+{{ end }}
 {{- with .Params.note -}}
     {{ $bib = $bib | append . }}
 {{- end -}}

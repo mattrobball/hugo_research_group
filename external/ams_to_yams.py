@@ -23,7 +23,6 @@ def attach_sum_id (article):
     with urllib.request.urlopen(target1) as search:
         xml = search.read()
     parsed_xml = feedparser.parse(xml)
-    score = 0.0
     summary = ''
     arxiv_id = ''
     title = ''
@@ -70,10 +69,13 @@ for ref in bib_data.entries:
     ref['mrclass'] = {'primary': msc[0], 'secondary': msc[1:]} 
     bibtexparser.customization.author(ref)
     authors = []
+    all_authors_last = ''
     for name in ref['author']:
         split_name = bibtexparser.customization.splitname(name)
-        authors.append({'first':' '.join(split_name['first']),'last':split_name['last'][0]})
+        authors.append({'first':''.join(split_name['first']),'last':split_name['last'][0]})
+        all_authors_last = ''.join([all_authors_last,split_name['last']])
     ref['authors'] = authors
+    ref['all_authors_last'] = all_authors_last
     ref.pop('author')
     editors = []
     for name in ref['editor']:

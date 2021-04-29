@@ -46,9 +46,10 @@ funding:
     project: 
     amount:
     duration:
-arxiv_id: 
+arxiv_id: thorne_f_1
 mathscinet_id: 840724
 zentralblatt_id: thorne.frank
-orchid_id: 
-google_scholar: 
+orchid_id: 0000-0001-9738-8168
+google_scholar:
+math_genealogy: 124226 
 ---
